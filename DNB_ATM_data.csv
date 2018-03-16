@@ -1,0 +1,109 @@
+;;;;;;;;;
+;atmID;atmName;atmAddress;zipCode;city;country;latitude;longitude;currency
+;NOR51101;Åsane ;Åsane Senter;5116;Ulset;Norway;60.466885;5.321219;NOK, EUR (Døgnåpen)
+;NOR51102;Åssiden ;Vårveien 25;3024;Drammen;Norway;59.754018;10.145327;NOK, EUR (Døgnåpen)
+;NOR51103;Amfi Senter Os ;Prestgardskogen 2 B;5200;Os;Norway;60.202235;5.456981;NOK
+;NOR51104;Amfisenteret ;Marnavn. 33;4514;Mandal;Norway;58.028856;7.461044;NOK
+;NOR51105;Arendal ;Peder Thomassensgate 12;4836;Arendal;Norway;58.460777;8.765368;NOK, EUR, DKK (Døgnåpen)
+;NOR51106;Asker ;Strøket 6;1370;Asker;Norway;59.835172;10.433937;NOK, EUR, SEK
+;NOR51107;Asker ;Strøket 6;1370;Asker;Norway;59.835172;10.433937;NOK, GBP, DKK (Døgnåpen)
+;NOR51108;Askim ;A.B. Aarstensgate 2;1830;Askim;Norway;59.582945;11.160854;NOK, EUR, SEK (Døgnåpen)
+;NOR51109;Bjørvika ;Dronning Eufemias gate 16;0191;Oslo;Norway;59.908226;10.758859;NOK, EUR (Døgnåpen)
+;NOR51110;Bjørvika ;Dronning Eufemias gate 30;0191;Oslo;Norway;59.907588;10.759842;NOK, EUR, USD
+;NOR51111;Borge ;Løenveien 5;1653;Sellebakk;Norway;59.227709;10.994835;NOK, EUR (Døgnåpen)
+;NOR51112;Borgenhaugen ;Skjebergvn 25;1739;Borgenhaugen;Norway;59.227709;10.994835;NOK (Døgnåpen)
+;NOR51113;CC Mart'n Senter ;Jernbanesvingen 6;2821;Gjøvik;Norway;60.799930;10.693014;NOK, EUR
+;NOR51114;CC Mart'n Senter ;Jernbanesvingen 6;2821;Gjøvik;Norway;60.799930;10.693014;NOK, EUR
+;NOR51115;CC Vest Senter ;Lilleakervn. 16;0283;Oslo;Norway;59.917459;10.635411;NOK, EUR
+;NOR51116;CC Vest Senter ;Lilleakervn. 16;0283;Oslo;Norway;59.917459;10.635411;NOK
+;NOR51117;Døvlesenteret ;Døvlebygget, Semsbyvn. 81;3170;Sem;Norway;59.282762;10.331502;NOK, EUR
+;NOR51118;Dalen ;Hotellvegen 36;3880;Dalen;Norway;59.444593;8.009858;NOK, EUR (Døgnåpen)
+;NOR51119;Drøbak ;Holterveien 2;1440;Drøbak;Norway;59.674491;10.657373;NOK, EUR, SEK (Døgnåpen)
+;NOR51120;Drammen ;Bragernes Torg 11;3017;Drammen;Norway;59.743770;10.205382;NOK, SEK, DKK
+;NOR51121;Drammen ;Bragernes Torg 11;3017;Drammen;Norway;59.743770;10.205382;NOK, EUR (Døgnåpen)
+;NOR51122;Eiendom Bergen ;Bryggesporen 1;5014;Bergen;Norway;60.395449;5.326479;NOK (Døgnåpen)
+;NOR51123;Førde ;Storehagen 1;6800;Førde;Norway;61.452144;5.855769;NOK, EUR (Døgnåpen)
+;NOR51124;Fagernes ;Jernbanevegen 5;2900;Fagernes;Norway;60.986002;9.234146;NOK, EUR (Døgnåpen)
+;NOR51125;Fornebu ;Forneburingen 209;1364;Oslo;Norway;59.893639;10.619933;NOK, EUR, USD (Døgnåpen)
+;NOR51126;Fornebu senter ;Snarøyveien 55;1364;Fornebu;Norway;59.893639;10.619933;NOK
+;NOR51127;Fredrikstad ;Nygårdsgaten 55;1607;Fredrikstad;Norway;59.267439;11.157061;NOK, GBP
+;NOR51128;Fredrikstad ;Nygårdsgaten 55;1607;Fredrikstad;Norway;59.267439;11.157061;NOK, EUR, SEK (Døgnåpen)
+;NOR51129;Fredrikstad ;Nygårdsgaten 55;1607;Fredrikstad;Norway;59.267439;11.157061;NOK, USD, DKK (Døgnåpen)
+;NOR51130;Galleriet Bergen ;Torgallmenningen 7;5014;Bergen;Norway;60.392854;5.323378;NOK
+;NOR51131;Gjøvik ;Fahlstrøm Plass 1;2815;Gjøvik;Norway;60.795925;10.690478;NOK, EUR (Døgnåpen)
+;NOR51132;Grønland ;Olafiagangen 5;0188;Oslo;Norway;59.912839;10.759237;NOK
+;NOR51133;Gran ;Storgt. 21;2750;Gran;Norway;60.357523;10.572227;NOK (Døgnåpen)
+;NOR51134;Grimstad ;Henrik Ibsensgt. 12;4876;Grimstad;Norway;58.341901;8.595110;NOK, EUR, DKK (Døgnåpen)
+;NOR51135;Gvarv ;Gvarvgata 45;3810;Gvarv;Norway;59.387978;9.175323;NOK, EUR (Døgnåpen)
+;NOR51136;Hønefoss ;Kvernberggt. 5;3510;Hønefoss;Norway;60.165178;10.256976;NOK, EUR (Døgnåpen)
+;NOR51137;Hamar ;Vangsvegen 70;2317;Hamar;Norway;60.796253;11.080899;NOK, EUR (Døgnåpen
+;NOR51138;Hamar Stadion ;Vangsvegen 62;2317;Hamar;Norway;60.796387;11.079799;NOK, EUR
+;NOR51139;Haugesund ;Haraldsgate 125;5525;Haugesund;Norway;59.412287;5.270216;NOK, GBP, EUR
+;NOR51140;Haugesund ;Haraldsgate 125;5525;Haugesund;Norway;59.412287;5.270216;NOK, EUR (Døgnåpen)
+;NOR51141;Haukeland Universitetssykehus ;Jonas Liesveg 65;5053;Bergen;Norway;60.374321;5.354136;NOK (Døgnåpen)
+;NOR51142;Heimdal ;Heimdalsveien 3;3117;Tønsberg;Norway;59.274312;10.425107;NOK (Døgnåpen)
+;NOR51143;Holmensenteret ;Vogellund 6;1394;Nesbru;Norway;59.854355;10.488652;NOK
+;NOR51144;Holmestrand ;Dr. Gaaruds plass 4;3080;Holmestrand;Norway;59.511517;10.217080;NOK, EUR (Døgnåpen)
+;NOR51145;Horten ;Apotekergata 20;3191;Horten;Norway;59.416303;10.483379;NOK, EUR
+;NOR51146;Horten ;Apotekergata 20;3191;Horten;Norway;59.416303;10.483379;NOK (Døgnåpen)
+;NOR51147;Jessheim ;Gotaasalleen 7;2051;Jessheim;Norway;60.140426;11.174463;NOK (Døgnåpen)
+;NOR51148;Jessheim ;Gotaasalleen 7;2051;Jessheim;Norway;60.140426;11.174463;NOK, EUR
+;NOR51149;Karl Johans gate ;Karl Johans gate 27-31;0021;Oslo;Norway;59.913649;10.740151;NOK, SEK (Døgnåpen)
+;NOR51150;Karl Johans gate ;Karl Johans gate 27-31;0021;Oslo;Norway;59.913649;10.740151;NOK, DKK
+;NOR51151;Karl Johans gate ;Karl Johans gate 27-31;0021;Oslo;Norway;59.913649;10.740151;NOK, USD, GBP
+;NOR51152;Karl Johans gate ;Karl Johans gate 27-31;0021;Oslo;Norway;59.913649;10.740151;NOK, EUR
+;NOR51153;Karl Johans gate ;Karl Johans gate 27-31;0021;Oslo;Norway;59.913649;10.740151;NOK, EUR, USD (Døgnåpen)
+;NOR51154;Kongsberg ;Storgt.16-18;3611;Kongsberg;Norway;59.669301;9.651011;NOK, EUR (Døgnåpen)
+;NOR51155;Kongsvinger ;Storgata 40;2213;Kongsvinger;Norway;60.192887;12.000534;NOK, SEK, EUR Døgnåpen)
+;NOR51156;Kopperud ;Kalkveien 11;2818;Gjøvik;Norway;60.776405;10.675433;NOK
+;NOR51157;Kristiansand S ;Markens gt. 19;4611;Kristiansand;Norway;58.144996;7.993779;NOK, DKK, EUR
+;NOR51158;Lande ;Tunevn.1a;1710;Sarpsborg;Norway;59.290883;11.097367;NOK
+;NOR51159;Larvik ;Sanden 1;3264;Larvik;Norway;59.050962;10.023056;NOK, SEK,GBP,USD
+;NOR51160;Larvik ;Sanden 1;3264;Larvik;Norway;59.050962;10.023056;NOK, DKK, EUR (Døgnåpen)
+;NOR51161;Lierbyen ;Hegsbroveien 52;3400;Lier;Norway;59.786109;10.245172;NOK, EUR (Døgnåpen)
+;NOR51162;Lillehammer ;Kirkegaten 72-74;2609;Lillehammer;Norway;61.115897;10.462545;NOK, EUR (Døgnåpen)
+;NOR51163;Lillestrøm ;Kirkegaten 1;2000;Lillestrøm;Norway;59.954938;11.046050;NOK, EUR
+;NOR51164;Lillestrøm ;Kirkegaten 1;2000;Lillestrøm;Norway;59.954938;11.046050;NOK
+;NOR51165;Måløy ;Sjøgata;6701;Måløy;Norway;61.930786;5.112569;NOK, EUR
+;NOR51166;Majorstuen ;Kirkeveien 59;0366;Oslo;Norway;59.929009;10.716380;NOK, EUR, Døgnåpen)
+;NOR51167;Moss ;Dronningensgate 19;1530;Moss;Norway;59.435594;10.662397;NOK, SEK
+;NOR51168;Moss ;Dronningensgate 19;1530;Moss;Norway;59.435594;10.662397;NOK, EUR (Døgnåpen)
+;NOR51169;Nøtterøy ;Ørsnesalleen 33;3120;Tønsberg;Norway;59.252117;10.417429;NOK, EUR (Døgnåpen)
+;NOR51170;Nanset ;Nansetgt 91;3269;Larvik;Norway;59.064794;10.039934;NOK, EUR (Døgnåpen)
+;NOR51171;Nesttun ;Østre Nesttunvei 2;5221;Nesttun;Norway;60.319151;5.353570;NOK (Døgnåpen)
+;NOR51172;Nytorget ;Nytorget;3616;Kongsberg;Norway;59.663924;9.647320;NOK (Døgnåpen)
+;NOR51173;Oasen Senter ;Folke Bernadottes vei 52;5147;Fyllingsdalen;Norway;60.349156;5.291106;NOK, EUR
+;NOR51174;Ottatunet Senter ;Ottatunet, Johan Nygårdsgate 12;2670;Otta;Norway;61.771999;9.540484;NOK,EUR (Døgnåpen)
+;NOR51175;Paleet senter ;Grev Wedels gate 44;3179;Åsgårdstrand;Norway;59.349699;10.461232;NOK, EUR (Døgnåpen)
+;NOR51176;Porsgrunn ;Storgata 141;3915;Porsgrunn;Norway;59.140350;9.654571;NOK, EUR (Døgnåpen)
+;NOR51177;Rådal ;Laguneveien 7;5239;Rådal;Norway;60.295330;5.326546;NOK, EUR (Døgnåpen)
+;NOR51178;Råholt ;Gladbakkveien 2c;2071;Råholt;Norway;60.281259;11.172563;NOK, EUR (Døgnåpen)
+;NOR51179;RIMI, Hunndalen ;Raufossveien 223;2827;Hunndalen;Norway;60.785801;10.641401;NOK (Døgnåpen)
+;NOR51180;Revetal ;Revetal Torvet;3174;Revetal;Norway;59.371374;10.266562;NOK, EUR (Døgnåpen)
+;NOR51181;Rikshospitalet ;Sognsvannsvn. 20;0027;Oslo;Norway;59.947429;10.714449;NOK (Døgnåpen)
+;NOR51182;Rodeløkka ;Dælenengata 3;0567;Oslo;Norway;59.925660;10.774707;NOK
+;NOR51183;Sandefjord ;Rådhusgaten 15;3211;Sandefjord;Norway;59.131568;10.222892;GBP, EUR, USD, DKK
+;NOR51184;Sandefjord ;Rådhusgaten 15;3211;Sandefjord;Norway;59.131568;10.222892;NOK, SEK (Døgnåpen)
+;NOR51185;Sandnes ;Langgata 2d;4306;Sandnes;Norway;58.850560;5.731814;NOK, EUR, USD (Døgnåpen)
+;NOR51186;Sandvika ;Leif Tronstads plass 6;1337;Sandvika;Norway;59.892923;10.523708;NOK, EUR (Døgnåpen)
+;NOR51187;Sarpsborg ;Torggata 6;1707;Sarpsborg;Norway;59.284188;11.112471;NOK, SEK (Døgnåpen)
+;NOR51188;Sarpsborg ;Torggata 6;1707;Sarpsborg;Norway;59.284188;11.112471;NOK, DKK, EUR, GBP, USD
+;NOR51189;Ski ;Kirkeveien 1;1400;Ski;Norway;59.720453;10.836792;NOK, EUR, SEK
+;NOR51190;Skien ;Hesselbergsgate 4;3717;Skien;Norway;59.209236;9.606714;NOK, EUR (Døgnåpen)
+;NOR51191;Solheimsviken ;Solheimsgaten 7C;5058;Bergen;Norway;60.377735;5.331709;NOK, GBP, EUR (Døgnåpen)
+;NOR51192;Sotra ;Bildøyvegen 11;5353;Straume;Norway;60.357554;5.122857;NOK, EUR (Døgnåpen)
+;NOR51193;Statoil Rundtom ;Rundtom 2;3041;Drammen;Norway;59.729774;10.224385;NOK (Døgnåpen)
+;NOR51194;Stavanger ;Haakon VII's gt 9;4005;Stavanger;Norway;58.969253;5.730015;NOK (Døgnåpen)
+;NOR51195;Stavanger ;Haakon VII's gt 9;4005;Stavanger;Norway;58.969253;5.730015;USD, EUR, GBP, DKK (Døgnåpen)
+;NOR51196;Stord ;Heiane 31;5401;Stord;Norway;59.763080;5.454659;NOK, EUR (Døgnåpen)
+;NOR51197;Storgata ;Storgt.56;2609;Lillehammer;Norway;61.114827;10.466304;NOK, EUR (Døgnåpen)
+;NOR51198;Storo ;Vitaminveien 6;0485;Oslo;Norway;59.945724;10.774833;NOK, EUR
+;NOR51199;Stovner Senter ;Stovner Senter 3;0985;Oslo;Norway;59.961193;10.924995;NOK, EUR
+;NOR51200;Strømsø ;Tollbugt 13;3044;Drammen;Norway;59.738807;10.205084;NOK
+;NOR51201;Strandtorget Senter ;Sliperivegen 2a;2609;Lillehammer;Norway;61.114479;10.452187;NOK, EUR
+;NOR51202;Sykehuset i Vestfold ;Halfdan Wilhelmsens allé;3116;Tønsberg;Norway;59.272071;10.414781;NOK (Døgnåpen)
+;NOR51203;Tønsberg ;Møllegaten 9;3111;Tønsberg;Norway;59.269273;10.408600;NOK, EUR (Døgnåpen)
+;NOR51204;Torgalmenningen ;Torgallmenningen 2;5020;Bergen;Norway;60.393700;5.325543;NOK
+;NOR51205;Torgalmenningen ;Torgallmenningen 2;5020;Bergen;Norway;60.393700;5.325543;EUR, USD, GBP, DKK
+;NOR51206;Tuvensenteret ;Tuvenbøygen 2;3676;Notodden;Norway;59.566260;9.222044;NOK, EUR
+;NOR51207;Vaterland, Grønland ;Schweigaards gt.10;0190;Oslo;Norway;59.911680;10.758148;NOK,DKK (Døgnåpen)

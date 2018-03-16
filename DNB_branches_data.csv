@@ -1,0 +1,59 @@
+;;;;;;;;
+;branchID;branchName;branchAddress;zipCode;city;country;latitude;longitude
+;NOR11101;DNB Åsane ;Åsane senter;5116;Oslo;Norway;60.465978;5.322385
+;NOR11102;DNB Arendal ;Peder Thomassensgate 12;4801;Arendal;Norway;58.460777;8.765368
+;NOR11103;DNB Asker ;Strøket 6;1383;Asker;Norway;59.835172;10.433937
+;NOR11104;DNB Askim ;A. B. Aarstens gate 2;1830;Askim;Norway;59.582945;11.160854
+;NOR11105;DNB Bergen ;Torgalmenningen 2;5020;Bergen;Norway;60.393700;5.325543
+;NOR11106;DNB Bryne ;Hetlandsgata 9, 9 etg;4344;Bryne;Norway;58.734296;5.650545
+;NOR11107;DNB Drøbak ;Holterveien 2A;1448;Drøbak;Norway;59.674051;10.655751
+;NOR11108;DNB Drammen ;Bragernes Torg 11;3017;Drammen;Norway;59.743770;10.205382
+;NOR11109;DNB Førde ;Storehagen 1b;6800;Førde;Norway;61.452011;5.855757
+;NOR11110;DNB Fagernes ;Jernbanevegen 5;2900;Fagerne;Norway;60.986002;9.234146
+;NOR11111;DNB Fornebu ;Forneburingen 209;1364;Oslo;Norway;59.893639;10.619933
+;NOR11112;DNB Fredrikstad ;Nygaardsgata 55;1607;Fredriks;Norway;59.213497;10.937640
+;NOR11113;DNB Gjøvik ;Fahlstrøms Plass 1;2815;Gjørvik;Norway;60.795925;10.690478
+;NOR11114;DNB Gran på Hadeland ;Storgata 21;2750;Gran;Norway;60.357523;10.572227
+;NOR11115;DNB Grimstad ;Henrik Ibsens gate 12;4878;Grimstad;Norway;58.341901;8.595110
+;NOR11116;DNB Hønefoss ;Kvernberggata 5;3510;Hønefos;Norway;60.165178;10.256976
+;NOR11117;DNB Hamar ;Vangsvegen 70;2317;Hamar;Norway;60.796253;11.080899
+;NOR11118;DNB Haugesund ;Haraldsgt. 125;5501;Haugesund;Norway;59.412287;5.270216
+;NOR11119;DNB Horten ;Apotekergata 20;3191;Horten;Norway;59.416303;10.483379
+;NOR11120;DNB Jessheim ;Gotaasalleen 7;2050;Jessheim;Norway;60.140426;11.174463
+;NOR11121;DNB Karl Johan ;Karl Johans gate 27;0159;Oslo;Norway;59.913649;10.740151
+;NOR11122;DNB Kongsberg ;Storgata 16-18;3611;Kongsberg;Norway;59.669301;9.651011
+;NOR11123;DNB Kongsvinger ;Storgata 40;2214;Konsvinger;Norway;60.192887;12.000534
+;NOR11124;DNB Kristiansund ;Markens gate 19;4612;Kristiansund;Norway;58.144996;7.993779
+;NOR11125;DNB Laguneparken ;Laguneveien 7;5239;Rådal;Norway;60.295330;5.326546
+;NOR11126;DNB Larvik ;Sanden 1;3264;Larvik;Norway;59.050962;10.023056
+;NOR11127;DNB Lillehammer ;Kirkegt. 72-74;2609;Lillehammer;Norway;61.115897;10.462545
+;NOR11128;DNB Lillestrøm ;Kanalveien 18;2004;Lillestrøm;Norway;59.951336;11.046244
+;NOR11129;DNB Majorstuen ;Kirkeveien 59;0366;Oslo;Norway;59.929009;10.716380
+;NOR11130;DNB Moss ;Dronningens gate 19;1530;Moss;Norway;59.435594;10.662397
+;NOR11131;DNB Nordstrand ;Ekebergveien 228A;1162;Oslo;Norway;59.861647;10.800451
+;NOR11132;DNB Oslo Lufthavn - Ankomst ;Postboks 40;2061;Gardermoen;Norway;60.197550;11.100415
+;NOR11133;DNB Oslo Lufthavn - Avgang ;Postboks 40;2061;Gardermoen;Norway;60.197550;11.100415
+;NOR11134;DNB Porsgrunn ;Storgata 141;3901;Porsgrunn;Norway;59.140350;9.654571
+;NOR11135;DNB Sandefjord ;Rådhusgata 15;3211;Sandefjord;Norway;59.131568;10.222892
+;NOR11136;DNB Sandnes ;Langgata 2d;4306;Sandnes;Norway;58.850560;5.731814
+;NOR11137;DNB Sandvika ;Leif Tronstads plass 6;1337;Sandvika;Norway;59.892923;10.523708
+;NOR11138;DNB Sarpsborg ;Torggata 6;1707;Sarpsborg;Norway;59.284188;11.112471
+;NOR11139;DNB Ski ;Kirkev. 1;1400;Ski;Norway;59.720453;10.836792
+;NOR11140;DNB Skien ;Hesselbergs gate 4;3717;Skien;Norway;59.209236;9.606714
+;NOR11141;DNB Sotra ;Bildøyvegen 11;5353;Straume;Norway;60.357554;5.122857
+;NOR11142;DNB Stavanger ;Haakon VIIs gt 9;4005;Stavanger;Norway;58.969253;5.730015
+;NOR11143;DNB Stord ;Heiane 31;5412;Stord;Norway;59.763080;5.454659
+;NOR11144;DNB Storo ;Vitaminveien 6;0485;Oslo;Norway;59.945724;10.774833
+;NOR11145;DNB Tønsberg ;Anton Jenssensgate 1;3125;Tønsberg;Norway;59.278633;10.403490
+;NOR11146;DNB Ålesund ;Kongensgate 15;6001;Ålesund;Norway;62.474170;6.156645
+;NOR11147;DNB Kristiansund ;Nedre Enggate 6;6501;Kristiansund;Norway;63.110834;7.730568
+;NOR11148;DNB Molde ;Storgtata 25;6413;Molde;Norway;62.737142;7.157260
+;NOR11149;DNB Steinkjer ;Brugata 2;7715;Steinkjer;Norway;64.016591;11.493907
+;NOR11150;DNB Stjørdal ;Stokmovegen 1;7501;Stjørdal;Norway;63.469257;10.922963
+;NOR11151;DNB Trondheim, Torvet ;Munkegt. 22;7013;Trondheim;Norway;63.429935;10.394514
+;NOR11152;DNB Mo i Rana;Nordahl Griegs gate 10;8622;Mo i Rana;Norway;66.310006;14.138150
+;NOR11153;DNB Harstad ;Sjøgata 5;9480;Harstad;Norway;68.800940;16.543986
+;NOR11154;DNB Sortland ;Strandgata 25;8400;Sortland;Norway;68.694382;15.415747
+;NOR11155;DNB Svolvær ;Skolegata 6;8300;Svolvær;Norway;68.234340;14.568041
+;NOR11156;DNB Alta ;Løkkeveien 41;9509;Alta;Norway;69.966697;23.271535
+;NOR11157;DNB Tromsø ;Fredrik Langes gate 22;9292;Tromsø;Norway;69.649587;18.954851
