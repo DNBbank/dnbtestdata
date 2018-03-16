@@ -25,13 +25,13 @@ __license__ = "GPLv3"
 __status__ = "Hack"
 __version__ = "0.0.2"
 
-import requests
+import datetime
 import json
 import random
-import datetime
 from random import randrange
-from random import choice
+
 from faker import Faker
+
 
 def get_random_birthdate(max_age = 100):
     this_year = datetime.datetime.now().year
@@ -77,6 +77,8 @@ def create_people (number_of_people):
         phone = fake.phone_number()
         email = fake.safe_email()
         id_type = random.choice(('passport', 'driverslicense', 'nationalidcard'))
+        nationality = 'Norwegian'
+        country = 'NO'
 
         # Bank account and credit card
         bank_account_bban = str(randrange(0,99999999999)).zfill(11) # 11 random digits. Not the same as IBAN below
@@ -100,12 +102,12 @@ def create_people (number_of_people):
             'lastName': last_name,
             'dateOfBirth': date_of_birth,
             'gender': gender,
-            'nationality': 'Norwegian',
+            'nationality': nationality,
             'address': {
                 'street': street,
                 'postalCode': postal_code,
                 'city': city,
-                'country': 'NO',
+                'country': country,
             },
             'phoneNumber': phone,
             'email': email,
@@ -121,9 +123,12 @@ def create_people (number_of_people):
         customerFileJson.write(data + '\n\n')
 
         # The person's data in a string
-        person_data = str('%r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r' %
-                          (ssn, first_name, last_name, gender, street, postal_code, city, phone, email, id_type,
-                           bank_account_bban, bank_account_iban, credit_card_no, credit_card_expiry_date, credit_card_cvc))
+        person_data = str('%r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r, %r' %
+                          (ssn, first_name, last_name, gender,
+                           street, postal_code, city, country,
+                           phone, email, id_type, nationality,
+                           bank_account_bban, bank_account_iban,
+                           credit_card_no, credit_card_expiry_date, credit_card_cvc))
 
         # Write to file
         customerFileTxt.write(person_data + '\n')
