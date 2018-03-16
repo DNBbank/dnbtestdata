@@ -5,7 +5,7 @@ Created on Tue Feb  6 12:15:25 2018
 @author: ab22764 (Severin Sjømark)
 """
 
-import math
+import datetime
 import random
 from datetime import timedelta, date
 
@@ -14,7 +14,7 @@ import pandas as pd
 
 # Initialize account metadata
 # Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
-nr_cust = 10
+nr_cust = 3
 min_nr_trx = np.random.choice(365, nr_cust, replace=True)
 min_acct_sum = np.random.choice(np.arange(-10000, 0), nr_cust, replace=True)
 max_acct_sum = np.random.choice(np.arange(0, 75000), nr_cust, replace=True)
@@ -32,17 +32,17 @@ for n in range(365):
 
 # Categories with some mean amounts, recurrency indicator etc.
 # Can be expanded to include customer segments, with different mean amounts
-categories = pd.DataFrame([['Loans&Rent', 1, 1, 'Out', 10000, 0],
+categories = pd.DataFrame([['Loans&Rent', 1, 1, 'Out', 12000, 0],
                            ['Utilities', 2, 1, 'Out', 2000, 0],
-                           ['Home', 3, 0, 'Out', 1000, 30],
+                           ['Home', 3, 0, 'Out', 1500, 30],
                            ['Transport', 4, 2, 'Out', 1000, 10],
-                           ['Groceries', 5, 0, 'Out', 500, 100],
+                           ['Groceries', 5, 0, 'Out', 1500, 150],
                            ['Health', 6, 0, 'Out', 500, 10],
-                           ['Culture&Activities', 7, 2, 'Out', 200, 30],
+                           ['Culture&Activities', 7, 2, 'Out', 200, 40],
                            ['Travel', 8, 0, 'Out', 5000, 20],
-                           ['Restaurants&Nightlife', 9, 0, 'Out', 200, 50],
-                           ['Shopping', 10, 0, 'Out', 400, 30],
-                           ['Savings', 11, 1, 'Out', 3000, 0],
+                           ['Restaurants&Nightlife', 9, 0, 'Out', 500, 50],
+                           ['Shopping', 10, 0, 'Out', 1000, 30],
+                           ['Savings', 11, 1, 'Out', 5000, 0],
                            ['Salary', 12, 1, 'In', 30000, 0],
                            ['Various In', 13, 0, 'In', 200, 40],
                            ['Various Out', 14, 0, 'Out', 200, 60],
@@ -56,17 +56,17 @@ frequencies = pd.DataFrame([['Monthly', 1, 30],
                             ['Yearly', 3, 365]], columns=['FreqName', 'FreqLabel', 'Duration'])
 
 # Probabilites for each category
-cat_prob = [0.1,    # Loans&Rent
+cat_prob = [0.1,  # Loans&Rent
             0.075,  # Utilities
-            0.05,   # Home
-            0.05,   # Transport
+            0.05,  # Home
+            0.05,  # Transport
             0.115,  # Groceries
-            0.02,   # Health
+            0.02,  # Health
             0.065,  # Culture&Activities
-            0.04,   # Travel
+            0.04,  # Travel
             0.065,  # Restaurants&Nightlife
             0.055,  # Shopping
-            0.05,   # Savings
+            0.05,  # Savings
             0.145,  # Salary
             0.015,  # Various In
             0.015,  # Various Out
@@ -100,6 +100,15 @@ def custom_delta(start, freq, from_m, end):
         return end
 
 
+def get_random_date(year):
+    try:
+        return datetime.datetime.strptime('{} {}'.format(random.randint(1, 366), year), '%j %Y')
+    # Leap year? Try again.
+    except ValueError:
+        get_random_date(random_year)
+
+
+
 SynthData = pd.DataFrame(columns=['AccountID', 'Date', 'Category', 'Amount'])
 for i in range(nr_cust):
     nr_trx_i = min_nr_trx[i]
@@ -120,13 +129,17 @@ for i in range(nr_cust):
             tmp_df = pd.DataFrame(columns=['AccountID', 'Date', 'Category', 'Amount'])
             mean = categories.loc[categories['CategoryLabel'] == cat, 'Mean'].iloc[0]
             std = mean / 4
-            amt = math.ceil(np.random.normal(mean, std) / 100) * 100  # round up to nearest 100
+            # amt = math.ceil(np.random.normal(mean, std) / 100) * 100  # round up to nearest 100
+            amt = round(np.random.normal(mean, std), 2)
             innOut = categories.loc[categories['CategoryLabel'] == cat, 'InOut'].iloc[0]
             if innOut == 'Out':
                 amt = -amt
             freq = np.random.choice(np.arange(1, nr_freq + 1), p=[0.75, 0.15, 0.1])
-            day = random.randint(1, 28)
-            start_month = random.randint(1, 12)
+            # day = random.randint(1, 28)
+            # start_month = random.randint(1, 12)
+            random_date = get_random_date(year)
+            day = random_date.day
+            start_month = random_date.month
             start = date(year, start_month, day)
             if freq == 3:
                 end = start
