@@ -106,6 +106,7 @@ def create_people (number_of_people):
             credit_card_cvc = ''
 
         # JSON
+        # API: https://dnbdeveloper.restlet.io/#type_customer
         person = {
             'personal_number': ssn,
             'firstName': first_name,
