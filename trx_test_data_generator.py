@@ -23,7 +23,7 @@ nr_cat = 16
 nr_freq = 3
 
 # Date range
-year = year
+year = 2017
 start_date = date(year, 1, 1)
 end_date = date(year, 12, 31)
 year_range = []
