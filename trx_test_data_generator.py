@@ -6,7 +6,6 @@ Created on Tue Feb  6 12:15:25 2018
 """
 
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 import random
 import math
@@ -24,8 +23,9 @@ nr_cat = 16
 nr_freq = 3
 
 # Date range
-start_date = date(2017, 1, 1)
-end_date = date(2017, 12, 31)
+year = year
+start_date = date(year, 1, 1)
+end_date = date(year, 12, 31)
 year_range = []
 for n in range(365):
     d = start_date + timedelta(n)
@@ -92,7 +92,8 @@ for i in range(nr_cust):
     max_acct_sum_i = max_acct_sum[i]
     min_acct_sum_i = min_acct_sum[i]
     count = 0
-    while ((count < nr_trx_i) or SynthData.loc[SynthData['AccountID'] == i, 'Amount'].agg(sum) < min_acct_sum_i or
+    while ((count < nr_trx_i) or
+           SynthData.loc[SynthData['AccountID'] == i, 'Amount'].agg(sum) < min_acct_sum_i or
            SynthData.loc[SynthData['AccountID'] == i, 'Amount'].agg(sum) > max_acct_sum_i):
         cat = np.random.choice(np.arange(1, nr_cat + 1), p=cat_prob)
         done = np.zeros(16)
@@ -112,15 +113,15 @@ for i in range(nr_cust):
             freq = np.random.choice(np.arange(1, nr_freq + 1), p=[0.75, 0.15, 0.1])
             day = random.randint(1, 28)
             start_month = random.randint(1, 12)
-            start = date(2017, start_month, day)
+            start = date(year, start_month, day)
             if freq == 3:
                 end = start
             elif freq == 2:
                 end_month = start_month + 3 * int((12 - start_month) / 3)
-                end = date(2017, end_month, day + 1)
+                end = date(year, end_month, day + 1)
             elif freq == 1:
-                end = date(2017, 12, day + 1)
-            date_ = date(2017, start_month, day)
+                end = date(year, 12, day + 1)
+            date_ = date(year, start_month, day)
             while date_ < end:
                 tmp_df = pd.concat([tmp_df, pd.DataFrame(
                     [[i, date_, categories.loc[categories['CategoryLabel'] == cat, 'CategoryName'].iloc[0], amt]],
@@ -171,15 +172,18 @@ SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum'])
 # Reformat date column
 SynthData['Date'] = pd.to_datetime(SynthData['Date'], dayfirst=True, format='%Y-%m-%d')
 SynthData = SynthData.sort_values(by=['Date'])
+
 # Generate random trx ID
 TRX_ID = np.random.choice(np.arange(1000000, 9999999), len(SynthData.index), replace=False)
 TRX_ID = np.sort(TRX_ID)
 SynthData['TrxID'] = TRX_ID
+
 # Generate "random" account ID
 SynthData['AccountID'] = 100000 + 3 * SynthData['AccountID']
+
 # Sort by accountId and date
 SynthData = SynthData.sort_values(by=['AccountID', 'Date'])
 SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount']]
+
 # Write to file
-SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum'])
 SynthData.to_csv('test.csv', sep=';', index=False)
