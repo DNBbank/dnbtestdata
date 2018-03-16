@@ -1,5 +1,7 @@
 # Test data for DNB
 
+Code to generate synthetic data for DNB Developer APIs: https://dnbdeveloper-restlet.io
+
 # People
 
 - Fake people with valid SSNs and realistic-ish data
