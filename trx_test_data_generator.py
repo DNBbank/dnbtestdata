@@ -5,20 +5,19 @@ Created on Tue Feb  6 12:15:25 2018
 @author: ab22764 (Severin Sjømark)
 """
 
-import numpy as np
-import pandas as pd
-import random
 import math
+import random
 from datetime import timedelta, date
 
-import time
+import numpy as np
+import pandas as pd
 
 # Initialize account metadata
 # Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
 nr_cust = 10
 min_nr_trx = np.random.choice(365, nr_cust, replace=True)
 min_acct_sum = np.random.choice(np.arange(-10000, 0), nr_cust, replace=True)
-max_acct_sum = np.random.choice(np.arange(0, 35000), nr_cust, replace=True)
+max_acct_sum = np.random.choice(np.arange(0, 75000), nr_cust, replace=True)
 nr_cat = 16
 nr_freq = 3
 
@@ -57,7 +56,22 @@ frequencies = pd.DataFrame([['Monthly', 1, 30],
                             ['Yearly', 3, 365]], columns=['FreqName', 'FreqLabel', 'Duration'])
 
 # Probabilites for each category
-cat_prob = [0.1, 0.075, 0.05, 0.05, 0.115, 0.02, 0.065, 0.04, 0.065, 0.055, 0.05, 0.145, 0.015, 0.015, 0.075, 0.065]
+cat_prob = [0.1,    # Loans&Rent
+            0.075,  # Utilities
+            0.05,   # Home
+            0.05,   # Transport
+            0.115,  # Groceries
+            0.02,   # Health
+            0.065,  # Culture&Activities
+            0.04,   # Travel
+            0.065,  # Restaurants&Nightlife
+            0.055,  # Shopping
+            0.05,   # Savings
+            0.145,  # Salary
+            0.015,  # Various In
+            0.015,  # Various Out
+            0.075,  # Subscriptions
+            0.065]  # Insurance
 
 
 # Custom time delta to handle recurrent payments
