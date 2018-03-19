@@ -10,7 +10,7 @@ Generates:
     - Fictional Acct ID
     - Random Category
     - Random Amount
-    - Random Date in 2017
+    - Random Date in year
 Some Categories are recurrent, i.e. occur frequently with the same amount, and on the same day of the month.
 
 THe process for generation is a random sampling process. 
@@ -29,6 +29,7 @@ Proposed further work:
 
 """
 
+import datetime
 import math
 import random
 from datetime import timedelta, date
@@ -46,9 +47,10 @@ max_acct_sum = np.random.choice(np.arange(0,100000), nr_cust, replace=True) # Ma
 nr_cat = 16 # Number of predefined categories
 nr_freq = 3 # Number of predefined frequencies 
 
-# Generate a Date range for 2017
-start_date = date(2017, 1, 1)
-end_date = date(2017, 12, 31)
+# Generate a Date range for year
+year = 2017
+start_date = date(year, 1, 1)
+end_date = date(year, 12, 31)
 year_range = []
 for n in range(365):
     d = start_date + timedelta(n)
@@ -79,7 +81,22 @@ frequencies = pd.DataFrame([['Monthly',1,30],
                      ['Yearly',3,365]], columns = ['FreqName','FreqLabel','Duration'])
 
 # Probabilites for each category
-cat_prob = [0.1,0.075,0.05,0.05,0.115,0.02,0.065,0.04,0.065,0.055,0.05,0.145,0.015,0.015,0.075,0.065]
+cat_prob = [0.1,  # Loans&Rent
+            0.075,  # Utilities
+            0.05,  # Home
+            0.05,  # Transport
+            0.115,  # Groceries
+            0.02,  # Health
+            0.065,  # Culture&Activities
+            0.04,  # Travel
+            0.065,  # Restaurants&Nightlife
+            0.055,  # Shopping
+            0.05,  # Savings
+            0.145,  # Salary
+            0.015,  # Various In
+            0.015,  # Various Out
+            0.075,  # Subscriptions
+            0.065]  # Insurance
 
 # Custom time delta to handle recurrent payments
 def custom_delta(start, freq, from_m, end):
@@ -105,6 +122,15 @@ def custom_delta(start, freq, from_m, end):
             return end
     else:
         return end
+
+
+# Get random date in specified year
+def get_random_date(year):
+    try:
+        return datetime.datetime.strptime('{} {}'.format(random.randint(1, 366), year), '%j %Y')
+    # Leap year? Try again.
+    except ValueError:
+        get_random_date(random_year)
 
 
 # Initialize empty dataframe
@@ -136,17 +162,20 @@ for i in range(nr_cust): # Iterate over the customer
             if innOut == 'Out':
                 amt = -amt   
             freq = np.random.choice(np.arange(1,nr_freq+1), p = [0.75, 0.15, 0.1])
-            day = random.randint(1,28)
-            start_month = random.randint(1,12)
-            start = date(2017,start_month,day)
+            # day = random.randint(1, 28)
+            # start_month = random.randint(1, 12)
+            random_date = get_random_date(year)
+            day = random_date.day
+            start_month = random_date.month
+            start = date(year, start_month, day)
             if freq == 3:
                 end = start
             elif freq == 2:
                 end_month = start_month + 3*int((12-start_month)/3)
-                end = date(2017,end_month,day+1)
+                end = date(year, end_month, day + 1)
             elif freq == 1:
-                end = date(2017,12,day+1)
-            date_ = date(2017,start_month,day)
+                end = date(year, 12, day + 1)
+            date_ = date(year, start_month, day)
             
             # Generate recurrent trx series
             while date_ < end:
