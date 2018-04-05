@@ -32,6 +32,9 @@ from random import randrange
 
 from faker import Faker
 
+def _iban_from_bban(bban):
+    check_digits = "42" # TODO: Calculate the check digits properly
+    return "NO" + check_digits + bban
 
 def get_random_birthdate(max_age = 100):
     this_year = datetime.datetime.now().year
@@ -82,7 +85,7 @@ def create_people (number_of_people):
 
         # Bank account and credit card
         bank_account_bban = str(randrange(0,99999999999)).zfill(11) # 11 random digits. Not the same as IBAN below
-        bank_account_iban = fake.iban() # No provider for no_NO in Faker (yet)
+        bank_account_iban = _iban_from_bban(bank_account_bban)
 
         # Maybe a credit card. Let's assume 95 % has one
         if randrange(0,100) > 5:
@@ -112,6 +115,7 @@ def create_people (number_of_people):
             'phoneNumber': phone,
             'email': email,
             'idType': id_type,
+            'bank_account_bban': bank_account_bban,
             'bank_account_iban': bank_account_iban,
             'credit_card_no': credit_card_no,
             'credit_card_expiry_date': credit_card_expiry_date,
