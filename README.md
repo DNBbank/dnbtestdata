@@ -4,7 +4,7 @@ Code to generate synthetic data for DNB Developer APIs: https://dnbdeveloper.res
 
 # DNB data
 
-Branches, ATMs, etc are avilable in the links below. Please note that the .csv suffix is incorrect: The files are not proper comma-separated files.
+Branches, ATMs, etc are avilable in the "csv" directory, and in the links below. Please note that the .csv suffix is incorrect: The files are not proper comma-separated files.
 
 * https://www.dnb.no/portalfront/datafiles/offices/branch.csv
 * https://www.dnb.no/portalfront/datafiles/offices/postal.csv
