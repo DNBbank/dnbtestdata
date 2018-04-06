@@ -2,6 +2,15 @@
 
 Code to generate synthetic data for DNB Developer APIs: https://dnbdeveloper.restlet.io
 
+# DNB data
+
+Branches, ATMs, etc are avilable in the links below. Please note that the .csv suffix is incorrect: The files are not proper comma-separated files.
+
+* https://www.dnb.no/portalfront/datafiles/offices/branch.csv
+* https://www.dnb.no/portalfront/datafiles/offices/postal.csv
+* https://www.dnb.no/portalfront/datafiles/offices/atm.csv
+* https://www.dnb.no/portalfront/datafiles/offices/realestate.csv
+
 # People
 
 - Fake people with valid SSNs and realistic-ish data
