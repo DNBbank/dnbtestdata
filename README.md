@@ -1,3 +1,7 @@
+# 🥁 Please note 🥁
+
+**IMPORTANT:** This is a work in progress, and all information may change at any time. Please contact developer@dnb.no if you have questions or comments. 
+
 # Test data for DNB
 
 Code to generate synthetic data for DNB Developer APIs: https://dnbdeveloper.restlet.io
