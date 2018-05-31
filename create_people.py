@@ -4,7 +4,6 @@
 Uses Faker quite a bit: https://github.com/joke2k/faker
 
 TODO:
-- Valid Norwegian SSNs: https://github.com/joke2k/faker/issues/714
 - Debit cards: One or more per person
 - Transactions (this is the interesting part):
     - Salary
@@ -41,6 +40,7 @@ def get_random_birthdate(max_age = 100):
     except ValueError:
         get_random_date(random_year)
 
+
 def create_people(number_of_people):
     fake = Faker('no_NO')
 
@@ -51,18 +51,20 @@ def create_people(number_of_people):
         year, month, day = [random_date.year, random_date.month, random_date.day]
         date_of_birth = str(year) + '-' + str(month).zfill(2) + '-' + str(day).zfill(2)
 
-        # SSN: Faking it until Faker supports Norwegian SSNs: https://github.com/joke2k/faker/issues/714
-        pnr = str(randrange(10000,99999)).zfill(6)
-        ssn = str(day).zfill(2) + str(month).zfill(2) + str(year)[-2] + pnr
-
         # Name and gender
         if random.choice((True,False)):
             gender = 'Female'
+            gender_indicator = random.choice(('0','2','4','6','8'))
             first_name = fake.first_name_female()
         else:
             gender = 'Male'
             first_name = fake.first_name_male()
+            gender_indicator = random.choice(('1','3','5','7','9'))
         last_name = fake.last_name()
+
+        # SSN: Faking it until Faker supports Norwegian SSNs: https://github.com/joke2k/faker/issues/714
+        pnr = str(random.randint(0,99)).zfill(2) + gender_indicator + str(random.randint(0,99)).zfill(2)
+        ssn = str(day).zfill(2) + str(month).zfill(2) + str(year)[-2:] + pnr
 
         # Contact information
         street = fake.street_name() + ' ' + fake.building_number()
