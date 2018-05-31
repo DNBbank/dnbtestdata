@@ -98,6 +98,8 @@ def create_people(number_of_people):
         persons.append(person)
 
     print(json.dumps(persons, indent=2))
+    with open('persons.json', 'w') as outfile:
+        json.dump(persons, outfile)
 
 # Handle CLI arguments
 parser = argparse.ArgumentParser(description="Quick hack to generate fake people and some data.")
