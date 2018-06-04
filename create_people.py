@@ -17,19 +17,22 @@ TODO:
 """
 
 __author__ = "Christian Løverås"
-__contact__ = "cl@dnb.no"
+__updated__ = "Hanna Helle"
+__contact__ = "developer@dnb.no"
 __copyright__ = "Copyright 2018, DNB Open Banking"
 __license__ = "GPLv3"
 __status__ = "Hack"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 import argparse
 import datetime
 import json
 import random
+import codecs
 from random import randrange
-
 from faker import Faker
+from datetime import date
+today = date.today()
 
 def get_random_birthdate(max_age = 100):
     this_year = datetime.datetime.now().year
@@ -43,6 +46,7 @@ def get_random_birthdate(max_age = 100):
 
 def create_people(number_of_people):
     fake = Faker('no_NO')
+    filename = "generated-people-" + str(today.day).zfill(2) + "-" + str(today.month).zfill(2) + "-" + str(today.year) + ".json"
 
     persons = list()
     for i in range(number_of_people):
@@ -71,7 +75,7 @@ def create_people(number_of_people):
         postal_code = fake.postcode()
         city = fake.city()
         phone = fake.phone_number()
-        email = fake.safe_email()
+        email = random.choice((first_name, last_name+str(year), first_name+last_name)).lower() + '@example.com'
         id_type = random.choice(('passport', 'driverslicense', 'nationalidcard'))
         nationality = 'Norwegian'
         country = 'NO'
@@ -94,12 +98,12 @@ def create_people(number_of_people):
             'email': email,
             'idType': id_type,
         }
-
         persons.append(person)
 
-    print(json.dumps(persons, indent=2))
-    with open('persons.json', 'w') as outfile:
-        json.dump(persons, outfile)
+    print(json.dumps(persons, indent=2, ensure_ascii=False))
+    with codecs.open(filename, 'w', encoding='utf-8') as outfile:
+        json.dump(persons, outfile, ensure_ascii=False)
+
 
 # Handle CLI arguments
 parser = argparse.ArgumentParser(description="Quick hack to generate fake people and some data.")
