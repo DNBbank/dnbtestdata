@@ -11,6 +11,7 @@ import random
 from datetime import date
 
 today = date.today()
+filename = 'generated-accounts' + str(today.day).zfill(2) + '-' + str(today.month).zfill(2) + '-' + str(today.year) + '.json'
 _weights = (5, 4, 3, 2, 7, 6, 5, 4, 3, 2)
 
 # See: https://no.wikipedia.org/wiki/Kontonummer
@@ -96,6 +97,7 @@ def calcuate_age(person):
 
 def create_accounts(persons):
     accounts = list()
+
     # Guessed probability of having an specific account:
     account_types = {
         'BRUKSKONTO': 100,
@@ -136,7 +138,7 @@ def create_accounts(persons):
 
 
     print(json.dumps(accounts, indent=2, ensure_ascii=False))
-    with codecs.open('accounts.json', 'w', encoding='utf-8') as outfile:
+    with codecs.open(filename, 'w', encoding='utf-8') as outfile:
         json.dump(accounts, outfile, ensure_ascii=False)
 
 
