@@ -1,14 +1,7 @@
 #!/usr/bin/env python3
 
 # To test, run with persons.json as argument
-''' Generate fake accounts, given a list of people.
-
-TODO:
-- logikk for BSU og student
-- fikse epost-adresser så det gir mening i forhold til navn
-- fikse æøå
-
-'''
+# Generate fake accounts, given a list of people.
 
 import argparse
 import codecs
@@ -92,7 +85,6 @@ def make_account(person, account_type):
         'countryOfAccountOwnerPublicId': 'NO',
         'accountOwnerName':     person['firstName'] + ' ' + person['lastName'],
     }
-
     return account
 
 def calcuate_age(person):
