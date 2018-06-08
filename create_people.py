@@ -36,7 +36,7 @@ today = date.today()
 
 def get_random_birthdate(max_age = 100):
     this_year = datetime.datetime.now().year
-    random_year = randrange(this_year - max_age, this_year)
+    random_year = randrange(this_year - max_age, this_year-14)
     try:
         return datetime.datetime.strptime('{} {}'.format(random.randint(1, 366), random_year), '%j %Y')
     # Leap year? Try again.
