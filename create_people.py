@@ -66,7 +66,10 @@ def create_people(number_of_people):
             gender_indicator = random.choice(('1','3','5','7','9'))
         last_name = fake.last_name()
 
-        # SSN: Faking it until Faker supports Norwegian SSNs: https://github.com/joke2k/faker/issues/714
+        # TODO: SSN: Faking it until Faker supports Norwegian SSNs, and it is plossible to:
+        # ssn = fake.ssn('19991231',gender[:1]) 
+        # https://github.com/joke2k/faker/pull/716
+        # https://github.com/joke2k/faker/issues/714
         pnr = str(random.randint(0,99)).zfill(2) + gender_indicator + str(random.randint(0,99)).zfill(2)
         ssn = str(day).zfill(2) + str(month).zfill(2) + str(year)[-2:] + pnr
 
