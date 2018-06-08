@@ -15,6 +15,8 @@ import codecs
 from datetime import date, timedelta
 
 today = date.today()
+filename_account_details = 'generated-account-details' + str(today.day).zfill(2) + '-' + str(today.month).zfill(2) + '-' + str(today.year) + '.json'
+filename_account_balances = 'generated-account-balances' + str(today.day).zfill(2) + '-' + str(today.month).zfill(2) + '-' + str(today.year) + '.json'
 
 def get_balance_and_interestdetails(account, interestrate):
     interestDetails = list()
@@ -143,11 +145,11 @@ def create_account_details(accounts):
 
 
     print(json.dumps(account_details_list, indent=2, ensure_ascii=False))
-    with codecs.open('account_details.json', 'w', encoding='UTF-8') as outfile:
+    with codecs.open(filename_account_details, 'w', encoding='UTF-8') as outfile:
         json.dump(account_details_list, outfile, ensure_ascii=False)
 
     print(json.dumps(account_balances, indent=2, ensure_ascii=False))
-    with codecs.open('account_balances.json', 'w', encoding='UTF-8') as outfile:
+    with codecs.open(filename_account_balances, 'w', encoding='UTF-8') as outfile:
         json.dump(account_balances, outfile, ensure_ascii=False)
 
 
