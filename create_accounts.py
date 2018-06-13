@@ -112,7 +112,7 @@ def create_accounts(persons):
 
     for person in persons:
         age = calcuate_age(person)
-        print(str(age))
+        
         # A person has between one and six accounts
         number_of_accounts = random.randint(1,6)
         account_count = 0
