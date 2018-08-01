@@ -77,7 +77,7 @@ def get_amount(type):
     random_number = random.randint(1,10)
     if type=='payment':
         treshold = 7
-        weight = ""
+        weight = "" #FIXME: This should probably be "-"
     else:
         treshold = 7
         # is the payment a debit or credit
@@ -101,6 +101,7 @@ def get_transaction_description(payment_type, transaction_date):
     if payment_type=='Varekjøp':
         store_list = ['Kiwi', 'Rema 1000', 'Meny', 'Joker', 'Vinmonopolet', fake.company()]
         store = random.choice(store_list) + ' '
+        # FIXME: Ideally a city cannot be random, but near the residence of the person
         city_list = ['Oslo', 'Trondheim', 'Bergen', fake.city()]
         city = random.choice(city_list) + ' '
         date = str(transaction_date[-2:]).zfill(2) + '.' + str(transaction_date[5:7]).zfill(2) + ' '
