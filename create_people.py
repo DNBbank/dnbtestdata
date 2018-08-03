@@ -32,7 +32,12 @@ import codecs
 from random import randrange
 from faker import Faker
 from datetime import date
+import pandas as pd
+
 today = date.today()
+postal_code_register = pd.read_excel("csv/Postnummerregister.xlsx",converters={'Postnummer':str,'Poststed':str})
+nr_postal_codes = postal_code_register.shape[0]
+
 
 def get_random_birthdate(max_age = 100):
     this_year = datetime.datetime.now().year
@@ -67,7 +72,7 @@ def create_people(number_of_people):
         last_name = fake.last_name()
 
         # TODO: SSN: Faking it until Faker supports Norwegian SSNs, and it is plossible to:
-        # ssn = fake.ssn('19991231',gender[:1]) 
+        # ssn = fake.ssn('19991231',gender[:1])
         # https://github.com/joke2k/faker/pull/716
         # https://github.com/joke2k/faker/issues/714
         pnr = str(random.randint(0,99)).zfill(2) + gender_indicator + str(random.randint(0,99)).zfill(2)
@@ -75,8 +80,12 @@ def create_people(number_of_people):
 
         # Contact information
         street = fake.street_name() + ' ' + fake.building_number()
-        postal_code = fake.postcode()
-        city = fake.city()
+
+        #
+        rand_postal_code = random.randint(0,nr_postal_codes)
+
+        postal_code = postal_code_register.iloc[rand_postal_code]['Postnummer'] #fake.postcode()
+        city = postal_code_register.iloc[rand_postal_code]['Poststed']#fake.city()
         phone = fake.phone_number()
         email = random.choice((first_name, last_name+str(year), first_name+last_name)).lower() + '@example.com'
         id_type = random.choice(('passport', 'driverslicense', 'nationalidcard'))
