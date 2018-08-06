@@ -1,30 +1,6 @@
 #!/usr/bin/env python3
-""" Quick hack to generate fake people and some data.
-
-Uses Faker quite a bit: https://github.com/joke2k/faker
-
-TODO:
-- Debit cards: One or more per person
-- Transactions (this is the interesting part):
-    - Salary
-    - Mortgage (for some)
-    - Insurance (for some)
-    - Utilities (electricity, public fees, etc)
-    - Car related expenses (for some)
-    - Food, transport, other everyday transactions
-    - Various other purchases
-    - Ideally: In segments/groups, with patterns, etc (endless possibilities to make it "realistic")
-"""
-
-__author__ = "Christian Løverås"
-__updated__ = "Hanna Helle"
-__contact__ = "developer@dnb.no"
-__copyright__ = "Copyright 2018, DNB Open Banking"
-__license__ = "GPLv3"
-__status__ = "Hack"
-__version__ = "0.0.3"
-
 import argparse
+<<<<<<< HEAD
 import datetime
 import json
 import random
@@ -47,14 +23,17 @@ def get_random_birthdate(max_age = 100):
     # Leap year? Try again.
     except ValueError:
         get_random_date(random_year)
+=======
+>>>>>>> d25cabc06181c775f71aef81dadd431b0dc27857
+
+from models.person.person import Person
+from utils.file_util import FileUtil
 
 
-def create_people(number_of_people):
-    fake = Faker('no_NO')
-    filename = "generated-people-" + str(today.day).zfill(2) + "-" + str(today.month).zfill(2) + "-" + str(today.year) + ".json"
-
-    persons = list()
+def create_list_of_people_json(number_of_people):
+    people = list()
     for i in range(number_of_people):
+<<<<<<< HEAD
         # Birth date
         random_date = get_random_birthdate(100)
         year, month, day = [random_date.year, random_date.month, random_date.day]
@@ -115,12 +94,15 @@ def create_people(number_of_people):
     print(json.dumps(persons, indent=2, ensure_ascii=False))
     with codecs.open(filename, 'w', encoding='utf-8') as outfile:
         json.dump(persons, outfile, ensure_ascii=False)
+=======
+        random_person = Person.generate_random()
+        people.append(random_person.to_json())
+    return people
+>>>>>>> d25cabc06181c775f71aef81dadd431b0dc27857
 
 
-# Handle CLI arguments
 parser = argparse.ArgumentParser(description="Quick hack to generate fake people and some data.")
 parser.add_argument('-n', type=int, default=10, help='The number of people to create')
 args = parser.parse_args()
 
-# Business time
-create_people(args.n)
+FileUtil.json_to_json_file(create_list_of_people_json(args.n), 'generated-people')
