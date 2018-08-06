@@ -34,7 +34,6 @@ def create_bban():
         digits = [random.randint(0, 9) for i in range(10)]
         # Modulo 11
         r = sum(map(operator.mul, digits, weights)) % 11
-
         if r == 0:
             c = 0
         elif r == 1:
@@ -43,7 +42,6 @@ def create_bban():
             continue
         else:
             c = 11 - r
-
         digits.append(c)
         return ''.join(str(x) for x in digits)
 
@@ -75,17 +73,16 @@ def get_date(type, day):
 
 def get_amount(type):
     random_number = random.randint(1,10)
-    if type=='payment':
-        treshold = 7
-        weight = "" #FIXME: This should probably be "-"
+    treshold = 7
+    # Assign a negative weight if the transactions are a type of payment
+    if type in ['payment','Varekjøp','Avtalegiro','Fast Oppdrag']:
+        weight = "-"
     else:
-        treshold = 7
-        # is the payment a debit or credit
+        # is the transaction a debit or credit
         if random_number < treshold:
             weight = "-"
         else:
             weight = ""
-
     if random_number < treshold:
         # most payments are of lower amounts
         amount = random.randint(0,1500)
@@ -135,7 +132,7 @@ def create_payments(accounts):
     # generating for all the different accounts
     for account in accounts:
         # only generating for current accounts
-        if(account['productName']=='BRUKSKONTO' or account['productName']=='BRUKSKONTO TILLEGG' or account['productName']=='STUDENT BRUKSKONTO'):
+        if account['productName'] in ['BRUKSKONTO','BRUKSKONTO TILLEGG','STUDENT BRUKSKONTO']:
             no_of_due_payments = random.randint(1,7) # must generate
             no_of_reserved_transactions = random.randint(1,3) # must generate
             account_number =    account['accountNumber']
@@ -150,9 +147,9 @@ def create_payments(accounts):
                     random_number = random.randint(0,5)
                     transaction_id   =  str(random.randint(100000, 9999999))
                     transaction_date =  get_date('previous', day)
-                    amount =            get_amount('transaction')
-                    external_reference = random.randint(100000, 9999999)
                     payment_type = get_payment_type()
+                    amount =            get_amount(payment_type)
+                    external_reference = random.randint(100000, 9999999)
                     description = get_transaction_description(payment_type, transaction_date)
 
                     if resv_trans_count < no_of_reserved_transactions and random_number<3:
