@@ -13,9 +13,9 @@ Generates:
     - Random Date in year
 Some Categories are recurrent, i.e. occur frequently with the same amount, and on the same day of the month.
 
-THe process for generation is a random sampling process. 
+THe process for generation is a random sampling process.
 We first randomly sample Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
-For each account we then sample a new category, and generate trx within this category, given mean amount within category, 
+For each account we then sample a new category, and generate trx within this category, given mean amount within category,
 max nr of trx within category, whether the category can be recurrent etc.
 
 Fictional Trx ID is generated to be increasing with time.
@@ -146,7 +146,6 @@ def read_customers_from_csv(file):
     return customer_id
 
 
-customer_ids = read_customers_from_csv('customers-generated.csv')
 
 # Initialize empty dataframe
 SynthData = pd.DataFrame(columns=['AccountID', 'Date', 'Category', 'Amount'])
@@ -184,7 +183,7 @@ for i in range(nr_cust):  # Iterate over the customer
             # Find random date
             # TODO: Because of the "day + 1" below, this sometimes/often fails.
             random_date = get_random_date(year)
-            day = random_date.day
+            day = random_date.day if random_date.day < 31 else 1 # HACK: Fix the todo above
             start_month = random_date.month
             start = date(year, start_month, day)
             if freq == 3:
@@ -255,7 +254,7 @@ for i in range(nr_cust):  # Iterate over the customer
         # Add temporary dataframe to full dataframe
         SynthData = pd.concat([SynthData, tmp_df])
     print(i)  # Print current Acct
-    print(customer_ids[i])  # Print the customer id for this account id
+
 
 # Print number of trx and total sum on account
 SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum'])
