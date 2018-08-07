@@ -42,7 +42,7 @@ from faker import Faker
 
 # Initialize account metadata
 # Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
-nr_cust = 5  # Number of Accounts to generate trx for
+nr_cust = 1  # Number of Accounts to generate trx for
 min_nr_trx = np.random.choice(365, nr_cust, replace=True)  # Minimum number of trx on acct
 min_acct_sum = np.random.choice(np.arange(-100000, 0), nr_cust, replace=True)  # Minimum deficit end of year on acct
 max_acct_sum = np.random.choice(np.arange(0, 100000), nr_cust, replace=True)  # Maximum surplus end of year on acct
@@ -360,7 +360,7 @@ def get_transaction_description(payment_category, transaction_date):
 #     d = ts.strftime('%d.%m')
 #     return d
 
-SynthData['Description'] = SynthData.apply(lambda row: get_transaction_description(row['Category'],row['Date']), axis=1)
+SynthData['description'] = SynthData.apply(lambda row: get_transaction_description(row['Category'],row['Date']), axis=1)
 # SynthData['Description'] = SynthData.apply(lambda row: random_descriptions[row['Category']] + ' Dato ' + parse_date(row['Date']), axis=1)
 
 # Print number of trx and total sum on account
@@ -380,7 +380,7 @@ SynthData['AccountID'] = 100000 + 3 * SynthData['AccountID']
 
 # Sort by accountId and date
 SynthData = SynthData.sort_values(by=['AccountID', 'Date'])
-SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount', 'Description']]
+SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount', 'description']]
 
 # Write to file
 # SynthData.to_csv('test.csv', sep=';', index=False)
@@ -389,4 +389,17 @@ SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount', 'Desc
 import pprint
 import json
 #pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
-print(SynthData[['Date','Category','Description','Amount']].head(100))
+#print(SynthData[['Date','Category','Description','Amount']].head(100))
+
+#Adding missing fields
+SynthData['details'] = SynthData.apply(lambda row:{ 'textCode' : '0023' },axis=1)
+SynthData['textlines'] = SynthData.apply(lambda row:{ 'Item' : row['description'].split()[0] },axis=1) #Probability not the best way to do it!!
+SynthData['valueDate'] = SynthData['Date']
+SynthData['bookingDate'] = SynthData['Date']
+SynthData['externalReference'] = np.random.randint(100000, 9999999, SynthData.shape[0])
+
+#Rename the columns
+SynthData.rename(columns={'Date':'transactionDate','TrxID':'transactionId','AccountID':'accountNumber','Amount':'amount',}, inplace=True)
+# print(SynthData[['description','textlines']])
+# print(SynthData.columns.values)
+pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
