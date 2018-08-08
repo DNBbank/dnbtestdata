@@ -402,4 +402,6 @@ SynthData['externalReference'] = np.random.randint(100000, 9999999, SynthData.sh
 SynthData.rename(columns={'Date':'transactionDate','TrxID':'transactionId','AccountID':'accountNumber','Amount':'amount',}, inplace=True)
 # print(SynthData[['description','textlines']])
 # print(SynthData.columns.values)
-pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
+# pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
+print(year_range)
+print(len(year))

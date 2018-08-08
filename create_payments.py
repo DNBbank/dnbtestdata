@@ -11,7 +11,7 @@ To test, run with a list of accounts (.json) as an argument
 TODO:
 - Dates should be changed to datetime formats
 
-
+FIXME: performance, for 100 generated people this script will run for 5 minutes
 '''
 
 import argparse
@@ -21,6 +21,8 @@ import json
 import random
 from faker import Faker
 from datetime import date, timedelta, datetime
+
+from models.transaction.checking_account import CheckingAccount
 
 today = date.today()
 fake = Faker('no_NO')
@@ -128,6 +130,7 @@ def create_payments(accounts):
     due_payments = list()
     booked_transactions = list()
     reserved_transactions = list()
+    done_accounts = 0
 
     # generating for all the different accounts
     for account in accounts:
@@ -143,8 +146,8 @@ def create_payments(accounts):
                 resv_trans_count = 0
                 no_of_transactions = 0
 
-                while no_of_transactions < trans_count:
-                    random_number = random.randint(0,5)
+                while resv_trans_count < no_of_reserved_transactions:
+                    # random_number = random.randint(0,5)
                     transaction_id   =  str(random.randint(100000, 9999999))
                     transaction_date =  get_date('previous', day)
                     payment_type = get_payment_type()
@@ -152,46 +155,51 @@ def create_payments(accounts):
                     external_reference = random.randint(100000, 9999999)
                     description = get_transaction_description(payment_type, transaction_date)
 
-                    if resv_trans_count < no_of_reserved_transactions and random_number<3:
-                        value_date = get_date('valuedate', day)
-                        reserved_transaction = {
-                                'transactionId':    transaction_id,
-                                'accountNumber':    account_number,
-                                'reservationDate':  transaction_date,
-                                'transactionDate':  transaction_date,
-                                'description':      description,
-                                'valueDate':        value_date,
-                                'amount':           amount,
-                                'externalReference': external_reference,
-                                'textlines':{
-                                    'Item': payment_type
-                                    },
-                                'details':{
-                                    'textCode':'0023'
-                                }
-                        }
-                        reserved_transactions.append(reserved_transaction)
-                        resv_trans_count += 1
-
-                    else:
-                        booked_transaction = {
+                    # if resv_trans_count < no_of_reserved_transactions and random_number<3:
+                    value_date = get_date('valuedate', day)
+                    reserved_transaction = {
                             'transactionId':    transaction_id,
                             'accountNumber':    account_number,
-                            'bookingDate':      transaction_date,
+                            'reservationDate':  transaction_date,
                             'transactionDate':  transaction_date,
-                             'description':     description,
-                             'valueDate':       transaction_date,
-                             'amount':          amount,
-                             'externalReference':   external_reference,
-                             'textlines':{
-                                'Item':     payment_type
-                             },
-                             'details':{
-                                'textCode': '0023'
-                             }
-                        }
-                        booked_transactions.append(booked_transaction)
-                        no_of_transactions += 1
+                            'description':      description,
+                            'valueDate':        value_date,
+                            'amount':           amount,
+                            'externalReference': external_reference,
+                            'textlines':{
+                                'Item': payment_type
+                                },
+                            'details':{
+                                'textCode':'0023'
+                            }
+                    }
+                    reserved_transactions.append(reserved_transaction)
+                    resv_trans_count += 1
+
+                    # else:
+                    #     booked_transaction = {
+                    #         'transactionId':    transaction_id,
+                    #         'accountNumber':    account_number,
+                    #         'bookingDate':      transaction_date,
+                    #         'transactionDate':  transaction_date,
+                    #          'description':     description,
+                    #          'valueDate':       transaction_date,
+                    #          'amount':          amount,
+                    #          'externalReference':   external_reference,
+                    #          'textlines':{
+                    #             'Item':     payment_type
+                    #          },
+                    #          'details':{
+                    #             'textCode': '0023'
+                    #          }
+                    #     }
+                    #     booked_transactions.append(booked_transaction)
+                    #     no_of_transactions += 1
+
+            # Generating Booked payments
+            booked_transactions.extend(CheckingAccount(account_number).transactions)
+            done_accounts += 1
+            print('Finished account nr.', done_accounts)
 
 
             # generating due payments
@@ -224,7 +232,7 @@ def create_payments(accounts):
         json.dump(due_payments, outfile, ensure_ascii=False)
 
     #booked trasactions
-    print(json.dumps(booked_transactions, indent=2, ensure_ascii=False))
+    #print(json.dumps(booked_transactions, indent=2, ensure_ascii=False))
     with codecs.open(filename_booked_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(booked_transactions, outfile, ensure_ascii=False)
 
