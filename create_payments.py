@@ -100,7 +100,6 @@ def get_transaction_description(payment_type, transaction_date):
     if payment_type=='Varekjøp':
         store_list = ['Kiwi', 'Rema 1000', 'Meny', 'Joker', 'Vinmonopolet', fake.company()]
         store = random.choice(store_list) + ' '
-        # FIXME: Ideally a city cannot be random, but near the residence of the person
         city_list = ['Oslo', 'Trondheim', 'Bergen', fake.city()]
         city = random.choice(city_list) + ' '
         date = str(transaction_date[-2:]).zfill(2) + '.' + str(transaction_date[5:7]).zfill(2) + ' '
@@ -196,13 +195,13 @@ def create_payments(accounts):
                     #     booked_transactions.append(booked_transaction)
                     #     no_of_transactions += 1
 
-            # Generating Booked payments
+            # Generating Booked Payments (transactions) for a checking account (BRUKSKONTO)
             booked_transactions.extend(CheckingAccount(account_number).transactions)
             done_accounts += 1
             print('Finished account nr.', done_accounts)
 
 
-            # generating due payments
+            # Generating due payments
             count = 0
             while count < no_of_due_payments:
                 payment_type = get_payment_type
@@ -226,17 +225,17 @@ def create_payments(accounts):
                 due_payments.append(due_payment)
                 count += 1
 
-
+    # Due Payments
     #print(json.dumps(due_payments, indent=2, ensure_ascii=False))
     with codecs.open(filename_payments, 'w', encoding='utf-8') as outfile:
         json.dump(due_payments, outfile, ensure_ascii=False)
 
-    #booked trasactions
+    # Booked trasactions
     #print(json.dumps(booked_transactions, indent=2, ensure_ascii=False))
     with codecs.open(filename_booked_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(booked_transactions, outfile, ensure_ascii=False)
 
-    #reservede trasactions
+    # Reserved trasactions
     #print(json.dumps(reserved_transactions, indent=2, ensure_ascii=False))
     with codecs.open(filename_reserved_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(reserved_transactions, outfile, ensure_ascii=False)
