@@ -66,4 +66,9 @@ As I said yesterday I recommend patterns in terms of bigger categories, and not 
 
 Categories 1,2,4,5,8,9,11,12,13,14 and 16 should have been mentioned above. The rest can have various amount of instances per account, with highly variable amounts. If it is possible in the seeding process I also recommend implementing some limits to the overall surplus or deficit on an account, for realism. If it is possible, the likelihood of the categories being represented on a current account is also variable, i.e. 1,2,5 and 12 are highly likely (sort of must-haves), while the rest are less likely. “
 
+# How to run it?
+1. To generate 10 people run `python create_people.py -n 10`, this will create a JSON-file with people `generated-people-{date}.json`. 
+2. `python create_accounts.py generated-people-{date}.json`, this will create a JSON-file with accounts `generated-accounts{date}.json`
+3. `python create_payments.py generated-accounts{date}.json`, this will create three JSON-files with booked, reserved and due transactions
+4. `python create_account_details_and_balances.py generated-accounts{date}.json`, this will create a JSON-file with balance and details for the accounts `generated-account-balances{date}.json`, `generated-account-details13-06-2018.json`
  
