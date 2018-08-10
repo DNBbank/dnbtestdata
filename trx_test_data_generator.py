@@ -13,9 +13,9 @@ Generates:
     - Random Date in year
 Some Categories are recurrent, i.e. occur frequently with the same amount, and on the same day of the month.
 
-THe process for generation is a random sampling process. 
+THe process for generation is a random sampling process.
 We first randomly sample Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
-For each account we then sample a new category, and generate trx within this category, given mean amount within category, 
+For each account we then sample a new category, and generate trx within this category, given mean amount within category,
 max nr of trx within category, whether the category can be recurrent etc.
 
 Fictional Trx ID is generated to be increasing with time.
@@ -38,18 +38,20 @@ from datetime import timedelta, date
 # Import packages
 import numpy as np
 import pandas as pd
+from faker import Faker
 
 # Initialize account metadata
 # Nr of accounts, minimum trx on account, minimum deficit on account and maximum surplus
-nr_cust = 10  # Number of Customers to generate trx for
+nr_cust = 1  # Number of Accounts to generate trx for
 min_nr_trx = np.random.choice(365, nr_cust, replace=True)  # Minimum number of trx on acct
 min_acct_sum = np.random.choice(np.arange(-100000, 0), nr_cust, replace=True)  # Minimum deficit end of year on acct
 max_acct_sum = np.random.choice(np.arange(0, 100000), nr_cust, replace=True)  # Maximum surplus end of year on acct
 nr_cat = 16  # Number of predefined categories
 nr_freq = 3  # Number of predefined frequencies
+fake = Faker('no_NO')
 
 # Generate a Date range for year
-year = 2017
+year = 2018
 start_date = date(year, 1, 1)
 end_date = date(year, 12, 31)
 year_range = []
@@ -77,6 +79,8 @@ categories = pd.DataFrame([['Loans&Rent', 1, 1, 'Out', 10000, 0],
                            ['Insurance', 16, 1, 'Out', 150, 0]],
                           columns=['CategoryName', 'CategoryLabel', 'RegularInd', 'InOut', 'Mean', 'MaxTrans'])
 
+payment_categories = ['Utilities','Home','Groceries','Health','Restaurants&Nightlife','Shopping']
+visa_categories = ['Subscriptions']
 # Frequency dataframe for recurrent payments
 frequencies = pd.DataFrame([['Monthly', 1, 30],
                             ['Quarterly', 2, 183],
@@ -99,7 +103,6 @@ cat_prob = [0.100,  # Loans&Rent
             0.015,  # Various Out
             0.075,  # Subscriptions
             0.065]  # Insurance
-
 
 # Custom time delta to handle recurrent payments
 def custom_delta(start, freq, from_m, end):
@@ -126,7 +129,6 @@ def custom_delta(start, freq, from_m, end):
     else:
         return end
 
-
 # Get random date in specified year
 def get_random_date(year):
     try:
@@ -134,19 +136,6 @@ def get_random_date(year):
     # Leap year? Try again.
     except ValueError:
         get_random_date(random_year)
-
-
-# Reads customerId (AccountID) from file creqted by create_people.py
-def read_customers_from_csv(file):
-    with open(file) as csvfile:
-        reader = csv.reader(csvfile, delimiter=';', quotechar='\'')
-        customer_id = []
-        for row in reader:
-            customer_id.append(row[0]);
-    return customer_id
-
-
-customer_ids = read_customers_from_csv('customers-generated.csv')
 
 # Initialize empty dataframe
 SynthData = pd.DataFrame(columns=['AccountID', 'Date', 'Category', 'Amount'])
@@ -184,7 +173,7 @@ for i in range(nr_cust):  # Iterate over the customer
             # Find random date
             # TODO: Because of the "day + 1" below, this sometimes/often fails.
             random_date = get_random_date(year)
-            day = random_date.day
+            day = random_date.day if random_date.day < 28 else 1 # HACK: Fix the todo above
             start_month = random_date.month
             start = date(year, start_month, day)
             if freq == 3:
@@ -255,10 +244,127 @@ for i in range(nr_cust):  # Iterate over the customer
         # Add temporary dataframe to full dataframe
         SynthData = pd.concat([SynthData, tmp_df])
     print(i)  # Print current Acct
-    print(customer_ids[i])  # Print the customer id for this account id
+
+#print(SynthData.head())
+
+# # TODO: Append description to columns, i.e., 'Varekjøp Rema 1000' for 'Groceries'
+# def random_groceries():
+#     groceries = ['Kiwi','Rema 1000','Bunnpris','Coop','Spar', 'Meny', 'Vinmonopolet']
+#     p = [.2, .2, .1, .1, .1, .1, .2] # Probability distribution
+#     return 'Varekjøp ' + np.random.choice(groceries, p=p)
+#
+# # TODO: Add description to more of the categories
+# def random_nightlife():
+#     clubs = ['Olivia',"Dit pepper'n gror",'Big Horn Steak House','McDonalds','Stratos','Syng','Max','Heidis', 'Kulturhuset', 'Blå']
+#     p = [.1, .05, .05, .2, .05, .1, .2, .1, .1, .05]
+#     return 'Varekjøp ' + np.random.choice(clubs,p=p)
+#
+# def random_utilities():
+#     firms = ['Clas Ohlson', 'Biltema', 'Kondomeriet', 'Bohus', 'Byggmaker', 'Mekonomen', 'Elkjøp']
+#     return 'Varekjøp ' + np.random.choice(firms)
+#
+# def random_home():
+#     shops = ['HM Home', 'Kid', 'Ikea', 'Princess', 'Zara Home', 'Jysk', 'Nille', 'Skeidar', 'Bohus']
+#     return 'Varekjøp ' + np.random.choice(shops)
+#
+# def random_transport():
+#     firms = ['Ruter', 'NSB', 'Bysykkel', 'Fjordline']
+#     return 'Visa ' + str(random.randint(101,999)) + ' ' +np.random.choice(firms)
+#
+# def random_health():
+#     firms = ['Boots', 'Apotek1', 'Vita', 'Proteinfabrikken', 'Life']
+#     return 'Varekjøp ' + np.random.choice(firms)
+#
+# def random_travel():
+#     firms = ['SAS', 'Norwegian', 'Wideroe', 'Polskibuss', 'Flixbuss', 'Ryan Air']
+#     return 'Visa ' + str(random.randint(101,999)) + ' ' +np.random.choice(firms)
+#
+# def random_shopping():
+#     firms = ['H&M', 'Gucci', 'Burberry', 'Hermes', 'Zara', 'Carlings', 'BikBok']
+#     return 'Varekjøp ' + np.random.choice(firms)
+#
+# # TODO: Subscriptions must be recurrent, and hence cannot be random choosen
+# def random_subscriptions():
+#     firms = ['Spotify', 'Tinder Gold', 'Netflix', 'HBO Nordic']
+#     return 'Visa ' + str(random.randint(101,999)) + ' ' + np.random.choice(firms)
+
+store_list_by_category = {
+                        'Loans&Rent': ['Rentebetalinger'],
+                        'Utilities': ['Clas Ohlson', 'Biltema', 'Kondomeriet', 'Bohus', 'Byggmaker', 'Mekonomen', 'Elkjøp'],
+                        'Home': ['HM Home', 'Kid', 'Ikea', 'Princess', 'Zara Home', 'Jysk', 'Nille', 'Skeidar', 'Bohus'],
+                        'Transport': ['Ruter', 'NSB', 'Bysykkel', 'Fjordline','Oslo Taxi'],
+                        'Groceries': ['Kiwi','Rema 1000','Bunnpris','Coop','Spar', 'Meny', 'Vinmonopolet'],
+                        'Health': ['Boots', 'Apotek1', 'Vita', 'Proteinfabrikken', 'Life'],
+                        'Culture&Activities': ['Den norske opera'],
+                        'Travel': ['SAS', 'Norwegian', 'Wideroe', 'Polskibuss', 'Flixbuss', 'Ryan Air'],
+                        'Restaurants&Nightlife': ['Olivia',"Dit pepper'n gror",'Big Horn Steak House','McDonalds','Stratos','Syng','Max','Heidis', 'Kulturhuset', 'Blå'],
+                        'Shopping': ['H&M', 'Gucci', 'Burberry', 'Hermes', 'Zara', 'Carlings', 'BikBok'],
+                        'Savings': ['Overføring til sparekonto'],
+                        'Salary': ['LØNN DNB'],
+                        'Various In': 'Vipps fra Enrico', # Remove?
+                        'Various Out': 'Vipps til Stian', # Remove?
+                        'Subscriptions': ['Spotify', 'Tinder Gold', 'Netflix', 'HBO Nordic'],
+                        'Insurance': ['Betaling til DNB Liv', 'Avtalegiro Gjensidige']
+                        }
+
+def get_transaction_description(payment_category, transaction_date):
+    if payment_category in payment_categories:
+        store_list = store_list_by_category[payment_category]
+        store = random.choice(store_list) + ' '
+        # TODO: Here it is possible to use the API from Gulesider http://api.eniro.com/
+        # to get an actual store based on a category in the same city as the customer
+        city_list = ['Oslo', 'Trondheim', 'Bergen', fake.city()]
+        city = random.choice(city_list) + ' '
+        date = pd.to_datetime(str(transaction_date)).strftime('%d.%m') + ' '#str(transaction_date[-2:]).zfill(2) + '.' + str(transaction_date[5:7]).zfill(2) + ' '
+        hour = str(random.randint(7,22)).zfill(2)
+        minute = str(random.randint(1,60)).zfill(2)
+        time = 'kl. ' + hour + '.' + minute
+        description = 'Varekjøp' + ' ' + store + city + 'Dato ' + date + time
+    elif payment_category in ['Travel','Transport','Subscriptions', 'Culture&Activities']:
+        store_list = store_list_by_category[payment_category]
+        store = random.choice(store_list) + ' '
+        number_in_description = str(random.randint(100,999))
+        description = 'Visa ' + store + ' ' + number_in_description
+    elif payment_category in ['Various Out','Various In']:
+        payment_types = ['Mobiloverføring', 'Overføring Innland', 'Fast Oppdrag']
+        name = fake.first_name() + ' ' + fake.last_name() + ' '
+        number_in_description = str(random.randint(1000000000,9999999999)) + ' '
+        description = random.choice(payment_types) + ' ' + number_in_description + name
+    else:
+        number_in_description = str(random.randint(100,999))
+        description = random.choice(store_list_by_category[payment_category]) + ' ' + number_in_description
+    return description
+
+# random_descriptions = {
+#                         'Loans&Rent': 'Rentebetalinger',
+#                         'Utilities': random_utilities(),
+#                         'Home': random_home(),
+#                         'Transport': random_transport(),
+#                         'Groceries': random_groceries(),
+#                         'Health': random_health(),
+#                         'Culture&Activities': 'Den norske opera',
+#                         'Travel': random_travel(),
+#                         'Restaurants&Nightlife': random_nightlife(),
+#                         'Shopping': random_shopping(),
+#                         'Savings': 'Overføring til sparekonto',
+#                         'Salary': 'LØNN DNB',
+#                         'Various In': 'Vipps fra Enrico',
+#                         'Various Out': 'Vipps til Stian',
+#                         'Subscriptions': random_subscriptions(),
+#                         'Insurance': 'Betaling til DNB Liv',
+#                         }
+# #print(SynthData.head())
+
+# def parse_date(date):
+#     ts = pd.to_datetime(str(date))
+#     d = ts.strftime('%d.%m')
+#     return d
+
+SynthData['description'] = SynthData.apply(lambda row: get_transaction_description(row['Category'],row['Date']), axis=1)
+# SynthData['Description'] = SynthData.apply(lambda row: random_descriptions[row['Category']] + ' Dato ' + parse_date(row['Date']), axis=1)
 
 # Print number of trx and total sum on account
-SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum'])
+#print(SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum']))
 
 # Reformat date column
 SynthData['Date'] = pd.to_datetime(SynthData['Date'], dayfirst=True, format='%Y-%m-%d')
@@ -274,7 +380,28 @@ SynthData['AccountID'] = 100000 + 3 * SynthData['AccountID']
 
 # Sort by accountId and date
 SynthData = SynthData.sort_values(by=['AccountID', 'Date'])
-SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount']]
+SynthData = SynthData[['TrxID', 'AccountID', 'Date', 'Category', 'Amount', 'description']]
 
 # Write to file
-SynthData.to_csv('test.csv', sep=';', index=False)
+# SynthData.to_csv('test.csv', sep=';', index=False)
+
+# print(SynthData.reset_index().head().to_json())
+import pprint
+import json
+#pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
+#print(SynthData[['Date','Category','Description','Amount']].head(100))
+
+#Adding missing fields
+SynthData['details'] = SynthData.apply(lambda row:{ 'textCode' : '0023' },axis=1)
+SynthData['textlines'] = SynthData.apply(lambda row:{ 'Item' : row['description'].split()[0] },axis=1) #Probability not the best way to do it!!
+SynthData['valueDate'] = SynthData['Date']
+SynthData['bookingDate'] = SynthData['Date']
+SynthData['externalReference'] = np.random.randint(100000, 9999999, SynthData.shape[0])
+
+#Rename the columns
+SynthData.rename(columns={'Date':'transactionDate','TrxID':'transactionId','AccountID':'accountNumber','Amount':'amount',}, inplace=True)
+# print(SynthData[['description','textlines']])
+# print(SynthData.columns.values)
+# pprint.pprint(json.loads(SynthData.head(30).to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z','')))
+print(year_range)
+print(len(year))
