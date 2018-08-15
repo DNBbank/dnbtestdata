@@ -12,7 +12,7 @@ class FileUtil:
         try:
             print(json.dumps(some_json, indent=2, ensure_ascii=False))
         except TypeError as e:
-            print("typeError: " + e)
+            print(e)
             raise
 
         with codecs.open(filename, 'w', encoding='utf-8') as outfile:
