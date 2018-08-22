@@ -16,8 +16,7 @@ class Card:
     def generate_random(cls, account, card_type):
         fake = Faker('no_NO')
         card_id = exrex.getone(CARD_ID_PATTERN) #16 chars
-        customer_id = exrex.getone(CUSTOMER_ID_PATTERN) # 18 chars
-        customer_public_id = account["accountOwnerPublicId"]
+        customer_id = account["accountOwnerPublicId"] # SSN 11 chars
         country_of_public_id = account["countryOfAccountOwnerPublicId"]
 
         #11 chars
@@ -30,14 +29,13 @@ class Card:
 
         primary_card = str(random.choice(["true", "false"]))
 
-        blocking_info = BlockingInfo.generate_random(card_status)
+        blocking_info = BlockingInfo.generate_random(card_status, card_type)
 
 
 
 
         return Card(card_id=card_id,
                     customer_id=customer_id,
-                    customer_public_id=customer_public_id,
                     country_of_public_id=country_of_public_id,
                     account_number=account_number,
                     masked_card_number=masked_card_number,
@@ -49,15 +47,13 @@ class Card:
                     blocking_info=blocking_info)
 
     def __init__(self,
-                 card_id, customer_id,
-                 customer_public_id, country_of_public_id,
+                 card_id, customer_id, country_of_public_id,
                  account_number, masked_card_number, card_holder_name,
                  source_product_name, card_status, card_type, primary_card,
                  blocking_info):
 
         self.card_id = card_id
         self.customer_id = customer_id
-        self.customer_public_id = customer_public_id
         self.country_of_public_id = country_of_public_id
         self.account_number = account_number
         self.masked_card_number = masked_card_number
@@ -73,7 +69,6 @@ class Card:
         return {
             'cardId': self.card_id,
             'customerId': self.customer_id,
-            'customerPublicId': self.customer_public_id,
             'countryOfPublicId': self.country_of_public_id,
             'accountNumber': self.account_number,
             'maskedCardNumber': self.masked_card_number,

@@ -118,6 +118,7 @@ def get_transaction_description(payment_type, transaction_date):
 
 def get_payment_type():
     x = random.randint(0,10)
+    # Kun negativ: Avtalegiro, Varekjøp, Visa
     payment_types = ['Mobiloverføring', 'Avtalegiro', 'Overføring', 'Fast Oppdrag', 'Varekjøp', 'Visa', 'Kontoregulering']
     if x < 4:
         payment_type = 'Varekjøp'
