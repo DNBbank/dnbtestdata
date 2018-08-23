@@ -1,4 +1,4 @@
-from .elements.card_type import CardType
+currencyfrom .elements.card_type import CardType
 import random
 import numpy as np
 class CardBalance:
@@ -11,23 +11,23 @@ class CardBalance:
         card_id = card.card_id
         booked_balance = "{:.2f}".format(balance)
         available_balance_without_credit = 0
-        account_currency = "NOK"
+        currency = "NOK"
         credit_limit = "{:.2f}".format(limit)
 
 
         return CardBalance(card_id=card_id, booked_balance=booked_balance,
                            available_balance_without_credit=available_balance_without_credit,
-                           account_currency=account_currency,
+                           currency=currency,
                            credit_limit=credit_limit)
 
     def __init__(self, card_id,
                  booked_balance, available_balance_without_credit,
-                 account_currency, credit_limit):
+                 currency, credit_limit):
 
         self.card_id = card_id
         self.booked_balance = booked_balance
         self.available_balance_without_credit = available_balance_without_credit
-        self.account_currency = account_currency
+        self.currency = currency
         self.credit_limit = credit_limit
 
     def to_json(self):
@@ -35,6 +35,6 @@ class CardBalance:
             'card_id': self.card_id,
             'bookedBalance': self.booked_balance,
             'availableBalanceWithoutCredit': self.available_balance_without_credit,
-            'accountCurrency': self.account_currency,
+            'currency': self.currency,
             'creditLimit': self.credit_limit,
         }
