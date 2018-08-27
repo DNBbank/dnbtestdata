@@ -4,6 +4,7 @@ Creates transactions for a checking account (BRUKSKONTO)
 Based on the transaction (trx_test_data_generator.py) script written by Severin Sjømark
 '''
 import datetime
+import calendar
 import math
 import random
 from datetime import timedelta, date
@@ -20,11 +21,12 @@ nr_cat = 16  # Number of predefined categories
 nr_freq = 3  # Number of predefined frequencies
 fake = Faker('no_NO')
 
-# Generate a Date range for a year
-# FIXME: Ideally it should be possible to change this range (start_date and end_date)
+
 year = 2018
-start_date = date(year, 1, 1)
-end_date = date(year, 12, 31)
+
+end_date = date.today()
+start_date = end_date - timedelta(days=365)
+
 year_range = []
 for n in range(365):
     d = start_date + timedelta(n)
@@ -119,12 +121,10 @@ def custom_delta(start, freq, from_m, end):
         return end
 
 # Get random date in specified year
-def get_random_date(year):
-    try:
-        return datetime.datetime.strptime('{} {}'.format(random.randint(1, 366), year), '%j %Y')
-    # Leap year? Try again.
-    except ValueError:
-        get_random_date(random_year)
+def get_random_date():
+    days_since = random.randint(0,365)
+    return date.today() - timedelta(days=days_since)
+
 
 def get_transaction_description(payment_category, transaction_date):
     if payment_category in ['Utilities','Home','Groceries','Health','Restaurants&Nightlife','Shopping']:
@@ -156,8 +156,9 @@ def get_transaction_description(payment_category, transaction_date):
 
 
 class CheckingAccount:
-    def __init__(self,accountNumber):
+    def __init__(self,accountNumber, accountOwnerSsn):
         self.accountNumber = accountNumber
+        self.accountOwnerSsn = accountOwnerSsn
         self.transactions = self.generate_transactions()
 
     def generate_transactions(self):
@@ -196,19 +197,20 @@ class CheckingAccount:
                 if innOut == 'Out':
                     amt = -amt
                 freq = np.random.choice(np.arange(1, nr_freq + 1), p=[0.75, 0.15, 0.1])
-                # Find random date
-                # TODO: Because of the "day + 1" below, this sometimes/often fails.
-                random_date = get_random_date(year)
-                day = random_date.day if random_date.day < 28 else 1 # HACK: Fix the todo above
-                start_month = random_date.month
-                start = date(year, start_month, day)
+
+                start = get_random_date()
+                day = start.day
+                start_month = start.month
+                year = start.year
+
                 if freq == 3:
                     end = start
                 elif freq == 2:
-                    end_month = start_month + 3 * int((12 - start_month) / 3)
-                    end = date(year, end_month, day + 1)
+                    end_month = 12
+                    (first_weekday, days_in_month) = calendar.monthrange(year, end_month)
+                    end = date(year, end_month, days_in_month)
                 elif freq == 1:
-                    end = date(year, 12, day + 1)
+                    end = date(year, 12, day)
                 date_ = date(year, start_month, day)
 
                 # Generate recurrent trx series
@@ -294,6 +296,9 @@ class CheckingAccount:
         SynthData['valueDate'] = SynthData['Date']
         SynthData['bookingDate'] = SynthData['Date']
         SynthData['externalReference'] = np.random.randint(100000, 9999999, SynthData.shape[0])
+
+        #Add SSN for grouping
+        SynthData['ssn'] = self.accountOwnerSsn
 
         # Rename the columns
         SynthData.rename(columns={'Date':'transactionDate','AccountID':'accountNumber','Amount':'amount',}, inplace=True)

@@ -21,7 +21,7 @@ import json
 import random
 from faker import Faker
 from datetime import date, timedelta, datetime
-
+import pandas as pd
 from models.transaction.checking_account import CheckingAccount
 
 today = date.today()
@@ -126,6 +126,7 @@ def get_payment_type():
         payment_type = random.choice(payment_types)
     return payment_type
 
+
 def create_payments(accounts):
     due_payments = list()
     booked_transactions = list()
@@ -138,10 +139,10 @@ def create_payments(accounts):
         if account['productName'] in ['BRUKSKONTO','BRUKSKONTO TILLEGG','STUDENT BRUKSKONTO']:
             no_of_due_payments = random.randint(1,7) # must generate
             no_of_reserved_transactions = random.randint(1,3) # must generate
-            account_number =    account['accountNumber']
-
+            account_number = account['accountNumber']
+            account_owner_ssn = account['accountOwnerPublicId']
             # generating with some transactions each day
-            for day in range(1,30):
+            for day in range(1, 30):
                 trans_count = random.randint(0,2)
                 resv_trans_count = 0
                 no_of_transactions = 0
@@ -158,6 +159,7 @@ def create_payments(accounts):
                     # if resv_trans_count < no_of_reserved_transactions and random_number<3:
                     value_date = get_date('valuedate', day)
                     reserved_transaction = {
+                            'ssn':              account_owner_ssn, # Only used for grouping
                             'transactionId':    transaction_id,
                             'accountNumber':    account_number,
                             'reservationDate':  transaction_date,
@@ -197,7 +199,7 @@ def create_payments(accounts):
                     #     no_of_transactions += 1
 
             # Generating Booked Payments (transactions) for a checking account (BRUKSKONTO)
-            booked_transactions.extend(CheckingAccount(account_number).transactions)
+            booked_transactions.extend(CheckingAccount(account_number, account_owner_ssn).transactions)
             done_accounts += 1
             print('Finished account nr.', done_accounts)
 
@@ -225,6 +227,7 @@ def create_payments(accounts):
                 }
                 due_payments.append(due_payment)
                 count += 1
+
 
     # Due Payments
     #print(json.dumps(due_payments, indent=2, ensure_ascii=False))

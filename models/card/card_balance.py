@@ -1,4 +1,4 @@
-currencyfrom .elements.card_type import CardType
+from .elements.card_type import CardType
 import random
 import numpy as np
 class CardBalance:

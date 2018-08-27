@@ -22,11 +22,16 @@ class BlockingInfo:
 
             # Unblocking credit cards is never allowed
         unblock_allowed = "false" if card_type == CardType.CREDIT else str(random.choice(["true", "false"]))
+        block_allowed = str(random.choice(["true", "false"]))
+
+        if (card_status == CardStatus.NOTACTIVE):
+            unblock_allowed = "false"
+            block_allowed = "false"
 
 
         return  {
             "performedBy": performed_by,
             "timestamp": timestamp,
-            "blockAllowed": str(random.choice(["true", "false"])),
+            "blockAllowed": block_allowed,
             "unblockAllowed": unblock_allowed
             }
