@@ -1,0 +1,172 @@
+[
+  {
+    "ssn": "29105573083",
+    "firstName": "Liv",
+    "lastName": "Ødegård",
+    "dateOfBirth": "1955-10-29",
+    "gender": "Female",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Eliassenkroken 1",
+      "postalCode": "6467",
+      "city": "Andreashavn",
+      "country": "NO"
+    },
+    "phoneNumber": "13857252",
+    "email": "ødegård1955@example.com",
+    "idType": "passport"
+  },
+  {
+    "ssn": "18052903871",
+    "firstName": "Astrid",
+    "lastName": "Ruud",
+    "dateOfBirth": "1929-05-18",
+    "gender": "Female",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Aunejordet 6",
+      "postalCode": "4313",
+      "city": "Rolfås",
+      "country": "NO"
+    },
+    "phoneNumber": "66 87 73 65",
+    "email": "astridruud@example.com",
+    "idType": "nationalidcard"
+  },
+  {
+    "ssn": "08096203957",
+    "firstName": "Thor",
+    "lastName": "Knudsen",
+    "dateOfBirth": "1962-09-08",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Haugeskogen 39D",
+      "postalCode": "2472",
+      "city": "Ceciliehamn",
+      "country": "NO"
+    },
+    "phoneNumber": "40892628",
+    "email": "thor@example.com",
+    "idType": "passport"
+  },
+  {
+    "ssn": "15025498515",
+    "firstName": "Øyvind",
+    "lastName": "Hansen",
+    "dateOfBirth": "1954-02-15",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Haugenstykket 79A",
+      "postalCode": "2048",
+      "city": "Mikkelsen",
+      "country": "NO"
+    },
+    "phoneNumber": "18 83 67 26",
+    "email": "øyvindhansen@example.com",
+    "idType": "nationalidcard"
+  },
+  {
+    "ssn": "15047232429",
+    "firstName": "Siri",
+    "lastName": "Strand",
+    "dateOfBirth": "1972-04-15",
+    "gender": "Female",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Bakkehagen 6",
+      "postalCode": "4830",
+      "city": "Hanssen",
+      "country": "NO"
+    },
+    "phoneNumber": "02 11 40 95",
+    "email": "strand1972@example.com",
+    "idType": "driverslicense"
+  },
+  {
+    "ssn": "01103068170",
+    "firstName": "John",
+    "lastName": "Aune",
+    "dateOfBirth": "1930-10-01",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Rasmussentoppen 39",
+      "postalCode": "2552",
+      "city": "Ireneeid",
+      "country": "NO"
+    },
+    "phoneNumber": "62 07 61 47",
+    "email": "john@example.com",
+    "idType": "driverslicense"
+  },
+  {
+    "ssn": "22121810569",
+    "firstName": "Sverre",
+    "lastName": "Jørgensen",
+    "dateOfBirth": "1918-12-22",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Svendsenekra 9",
+      "postalCode": "4543",
+      "city": "Hauge",
+      "country": "NO"
+    },
+    "phoneNumber": "91612001",
+    "email": "sverre@example.com",
+    "idType": "passport"
+  },
+  {
+    "ssn": "15099564713",
+    "firstName": "Karl",
+    "lastName": "Myhre",
+    "dateOfBirth": "1995-09-15",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Martinsenlia 93",
+      "postalCode": "5926",
+      "city": "Andersen",
+      "country": "NO"
+    },
+    "phoneNumber": "11 54 30 18",
+    "email": "myhre1995@example.com",
+    "idType": "nationalidcard"
+  },
+  {
+    "ssn": "12034802382",
+    "firstName": "Dag",
+    "lastName": "Andreassen",
+    "dateOfBirth": "1948-03-12",
+    "gender": "Male",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Iversenstubben 7",
+      "postalCode": "6551",
+      "city": "Vik",
+      "country": "NO"
+    },
+    "phoneNumber": "53 33 87 89",
+    "email": "andreassen1948@example.com",
+    "idType": "driverslicense"
+  },
+  {
+    "ssn": "10016956239",
+    "firstName": "Camilla",
+    "lastName": "Andresen",
+    "dateOfBirth": "1969-01-10",
+    "gender": "Female",
+    "nationality": "Norwegian",
+    "address": {
+      "street": "Jørgensenholtet 64",
+      "postalCode": "1574",
+      "city": "Toreborg",
+      "country": "NO"
+    },
+    "phoneNumber": "+47879485808",
+    "email": "andresen1969@example.com",
+    "idType": "driverslicense"
+  }
+]
