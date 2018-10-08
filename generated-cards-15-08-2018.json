@@ -1,0 +1,933 @@
+[
+  {
+    "cardId": "TQJQ95214468J85O",
+    "customerId": "FH94182158477392Q",
+    "customerPublicId": "29105573083",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12050576967",
+    "maskedCardNumber": "************7196",
+    "cardHolderName": "Liv Ødegård",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "IHMR56189598S24L",
+    "customerId": "WQ63423624330826K",
+    "customerPublicId": "29105573083",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0855",
+    "cardHolderName": "Liv Ødegård",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "RHFJ53721342S98L",
+    "customerId": "EB25155501329955Y",
+    "customerPublicId": "29105573083",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************6466",
+    "cardHolderName": "Liv Ødegård",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "QLDW22575585E90E",
+    "customerId": "TF42837963500339G",
+    "customerPublicId": "29105573083",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************2926",
+    "cardHolderName": "Liv Ødegård",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "YRXC45537576X88Y",
+    "customerId": "BP84452397274521U",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12002286450",
+    "maskedCardNumber": "************5164",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "ZIXP85862349W92Y",
+    "customerId": "PD49412047315378L",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************5181",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "ROSK34388588Q58Y",
+    "customerId": "ID94086864132255H",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12030153488",
+    "maskedCardNumber": "************1717",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "ZMGM27961285E10Q",
+    "customerId": "IV80133417899469U",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************9937",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "DINERS",
+    "cardStatus": "BLOCKED",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "B",
+      "timestamp": "2017-12-31 12:26:19",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "CIZL31054316J80R",
+    "customerId": "TI14867061996411N",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************5898",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "DGWB55901928E11M",
+    "customerId": "SO15699126704753A",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12095937887",
+    "maskedCardNumber": "************9962",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "VISA",
+    "cardStatus": "BLOCKED",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "B",
+      "timestamp": "2018-03-13 16:43:36",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "XLQJ82040825Q42X",
+    "customerId": "DY14186341424034V",
+    "customerPublicId": "18052903871",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************5636",
+    "cardHolderName": "Astrid Ruud",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "HZSL71476721T75M",
+    "customerId": "IM22501994360652A",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12013850842",
+    "maskedCardNumber": "************5656",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "PAXF87384391M34F",
+    "customerId": "HL97399731334595E",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12054471679",
+    "maskedCardNumber": "************7099",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "VISA",
+    "cardStatus": "NOTACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "LBYW87203890Q50H",
+    "customerId": "IW26054342019352F",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************7306",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "EXIL04338653W97X",
+    "customerId": "VL60210462510089H",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0761",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "NIYD01557020A22L",
+    "customerId": "AJ37311198420902W",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12016976077",
+    "maskedCardNumber": "************0231",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "UZRZ74205129G08O",
+    "customerId": "PN61193755065561O",
+    "customerPublicId": "08096203957",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0540",
+    "cardHolderName": "Thor Knudsen",
+    "sourceProductName": "AMEX CARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "OPIQ35750141I35Z",
+    "customerId": "HY28382114462477W",
+    "customerPublicId": "15025498515",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12032394612",
+    "maskedCardNumber": "************5887",
+    "cardHolderName": "Øyvind Hansen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "ZETW98093803K75O",
+    "customerId": "NX90083605947625B",
+    "customerPublicId": "15025498515",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0770",
+    "cardHolderName": "Øyvind Hansen",
+    "sourceProductName": "AMEX CARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "LEKJ73247321Y62O",
+    "customerId": "WI53872287481788E",
+    "customerPublicId": "15047232429",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12020201633",
+    "maskedCardNumber": "************6896",
+    "cardHolderName": "Siri Strand",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "IYEN47340932H28K",
+    "customerId": "FP73846286528828R",
+    "customerPublicId": "15047232429",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0819",
+    "cardHolderName": "Siri Strand",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "NDJQ97273895D66L",
+    "customerId": "SV41783055037004Y",
+    "customerPublicId": "15047232429",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************5602",
+    "cardHolderName": "Siri Strand",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "DQAI19595376D11T",
+    "customerId": "IQ76127909730889N",
+    "customerPublicId": "01103068170",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12005305636",
+    "maskedCardNumber": "************3986",
+    "cardHolderName": "John Aune",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "WCFR48594954B17Q",
+    "customerId": "AP86350257874387T",
+    "customerPublicId": "01103068170",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************6844",
+    "cardHolderName": "John Aune",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "UVLM13951541M55L",
+    "customerId": "ZQ77185055834509F",
+    "customerPublicId": "01103068170",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12021342057",
+    "maskedCardNumber": "************0945",
+    "cardHolderName": "John Aune",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "UQIH95868293F28B",
+    "customerId": "SO73153251164648H",
+    "customerPublicId": "01103068170",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************2935",
+    "cardHolderName": "John Aune",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "DRBS10782881O94V",
+    "customerId": "WY79598086689227M",
+    "customerPublicId": "01103068170",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************3420",
+    "cardHolderName": "John Aune",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "ZCGO25057977D48Q",
+    "customerId": "YD49071142225007O",
+    "customerPublicId": "22121810569",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12026494494",
+    "maskedCardNumber": "************8698",
+    "cardHolderName": "Sverre Jørgensen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "CGIR80762758Q09L",
+    "customerId": "DI12044695362480M",
+    "customerPublicId": "22121810569",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************6546",
+    "cardHolderName": "Sverre Jørgensen",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "RBAN32156422K89P",
+    "customerId": "JM06506491653897Q",
+    "customerPublicId": "22121810569",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************2158",
+    "cardHolderName": "Sverre Jørgensen",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "NOTACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "CIOG20717668N10Y",
+    "customerId": "VZ74249272698702I",
+    "customerPublicId": "15099564713",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12032302538",
+    "maskedCardNumber": "************7254",
+    "cardHolderName": "Karl Myhre",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "FAVK01264632T35J",
+    "customerId": "BI14067933334263Q",
+    "customerPublicId": "15099564713",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************5321",
+    "cardHolderName": "Karl Myhre",
+    "sourceProductName": "DINERS",
+    "cardStatus": "BLOCKED",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "C",
+      "timestamp": "2018-04-29 02:09:42",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "AUPS97004114E18D",
+    "customerId": "EH58001744834069D",
+    "customerPublicId": "15099564713",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************9220",
+    "cardHolderName": "Karl Myhre",
+    "sourceProductName": "AMEX CARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "JKZX05181231H96I",
+    "customerId": "PU86157201322943T",
+    "customerPublicId": "15099564713",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************4576",
+    "cardHolderName": "Karl Myhre",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "PLLB11591553X09R",
+    "customerId": "SW07006645203263X",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12041382752",
+    "maskedCardNumber": "************3223",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "QCIR79884061F04O",
+    "customerId": "RF25834158943031C",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************1381",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "YMJB51405044F75N",
+    "customerId": "MC60299988430636Q",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************9542",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "USDD70989305N15J",
+    "customerId": "BR13484335938055B",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12065818304",
+    "maskedCardNumber": "************1931",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "QOFI07473933C80G",
+    "customerId": "CN26460340524918S",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************1962",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "TJON46221731O60I",
+    "customerId": "XT48384076936304D",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12021652057",
+    "maskedCardNumber": "************2443",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "VISA",
+    "cardStatus": "BLOCKED",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "C",
+      "timestamp": "2017-10-14 19:12:09",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "MYRH85918924G06F",
+    "customerId": "OB70029661095363P",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************8766",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "LURU23342796J33K",
+    "customerId": "PN40892158181131O",
+    "customerPublicId": "12034802382",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************9042",
+    "cardHolderName": "Dag Andreassen",
+    "sourceProductName": "AMEX CARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "IFEE94566754B03D",
+    "customerId": "ZO11649463456649N",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12007797450",
+    "maskedCardNumber": "************8853",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "VISA",
+    "cardStatus": "NOTACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "BFWJ33658319V43K",
+    "customerId": "AA31942410477617W",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12028861815",
+    "maskedCardNumber": "************7085",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "VISA",
+    "cardStatus": "NOTACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "JCUO58626372U13U",
+    "customerId": "YI50493236892132H",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************6817",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "MAESTRO",
+    "cardStatus": "NOTACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "DCBZ14143384H19R",
+    "customerId": "UQ91768302424442A",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************8011",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "AMEX CARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "XITM60860392X26E",
+    "customerId": "KF06794722500769I",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "12066105777",
+    "maskedCardNumber": "************5319",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "VISA",
+    "cardStatus": "ACTIVE",
+    "cardType": "DEBIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "true"
+    }
+  },
+  {
+    "cardId": "QTMR61543042K51V",
+    "customerId": "UO81547858183027P",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************3651",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "MASTERCARD",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "true",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "true",
+      "unblockAllowed": "false"
+    }
+  },
+  {
+    "cardId": "FZIS15606969T23D",
+    "customerId": "HK92904091747340O",
+    "customerPublicId": "10016956239",
+    "countryOfPublicId": "NO",
+    "accountNumber": "",
+    "maskedCardNumber": "************0819",
+    "cardHolderName": "Camilla Andresen",
+    "sourceProductName": "DINERS",
+    "cardStatus": "ACTIVE",
+    "cardType": "CREDIT",
+    "primary_card": "false",
+    "blockingInfo": {
+      "performedBy": "",
+      "timestamp": "",
+      "blockAllowed": "false",
+      "unblockAllowed": "true"
+    }
+  }
+]

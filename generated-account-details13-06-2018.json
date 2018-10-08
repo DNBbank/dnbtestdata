@@ -1,0 +1,1046 @@
+[
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Liv Ødegård", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12050576967",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1848.9500000000003,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1493.65,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0612050576967",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2015-02-17"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Liv Ødegård", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12062413512",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 13099.75,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 8951.75,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO5312062413512",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2011-01-04"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Liv Ødegård", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12016125802",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -959335.2926803548
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO7012016125802",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2014-00-27"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12002286450",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1098.9,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 512.4,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO1712002286450",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1989-05-16"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12026604359",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 962.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 206.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO7312026604359",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2006-06-07"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12030153488",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1679.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 247.10000000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO7512030153488",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1979-05-02"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12085677526",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 3660.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1524.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0412085677526",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1974-06-27"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12095937887",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 2826.1499999999996,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1068.8500000000001,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO5612095937887",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1971-03-28"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12036683707",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 29369.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 2230.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO8212036683707",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1948-02-17"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Astrid Ruud", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12038458562",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -1240258.2843874078
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0012038458562",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1957-08-12"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12013850842",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 958.45,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 708.1500000000001,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO7412013850842",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1965-09-24"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12054471679",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 239.95,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 225.35000000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO6512054471679",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1996-03-14"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12067790259",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -7186697.550404355
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO2412067790259",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2015-06-24"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12016976077",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1667.75,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1440.0500000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO9112016976077",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1989-09-06"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12089225131",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 18996.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 12766.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO5212089225131",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1964-00-12"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Thor Knudsen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12002974440",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -983602.047552824
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO8412002974440",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1972-02-13"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Øyvind Hansen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12032394612",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1775.25,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 212.65,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO4612032394612",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1995-03-11"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Øyvind Hansen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12096568175",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -3174260.190766833
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO2612096568175",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2003-03-04"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Siri Strand", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12020201633",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1519.45,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1306.95,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0612020201633",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1986-11-23"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Siri Strand", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12078488637",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 24233.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1715.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO6112078488637",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2014-00-13"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Siri Strand", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12005970047",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -8777329.57377644
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO9012005970047",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1975-05-14"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12005305636",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 841.6,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0.6000000000000001,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO8512005305636",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2003-05-17"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12070378819",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 14459.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 6695.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO3812070378819",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1953-00-11"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12050782347",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -576064.690185881
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO1712050782347",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1964-00-14"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12021342057",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 2197.15,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1567.65,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO4512021342057",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1969-03-16"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12019982326",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 43692.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 6116.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO4312019982326",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1999-07-28"
+  },
+  {
+    "accountUserRoles": [{ "roleOwnerName": "John Aune", "roleType": "OWNER" }],
+    "accountCurrency": "NOK",
+    "accountNumber": "12037317782",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -1403874.2012743563
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO4912037317782",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1965-09-26"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Sverre Jørgensen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12026494494",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1355.15,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 275.75,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO8512026494494",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2018-01-09"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Sverre Jørgensen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12055713015",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 14468.75,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 2888.25,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO2012055713015",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2018-02-17"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Sverre Jørgensen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12035244304",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -470165.4453149173
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO4512035244304",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2018-03-20"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Karl Myhre", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12032302538",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 2966.65,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 383.15000000000003,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO9512032302538",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2005-10-09"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Karl Myhre", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12078407617",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 7099.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 2166.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0212078407617",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2013-04-15"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Karl Myhre", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12036692916",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 545473.6000000001,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 399803.2,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 3.2 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO9112036692916",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2010-09-12"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12041382752",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1164.4,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 159.20000000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO7012041382752",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1966-00-02"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12005222660",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 3618.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 2378.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO6812005222660",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1981-10-04"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12065818304",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1695.2500000000002,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1339.8500000000001,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO1212065818304",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1976-04-00"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12057027947",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 34364.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 6090.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO3612057027947",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1970-07-28"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12021652057",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 853.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 43.6,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0212021652057",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1979-01-11"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12022834923",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 40193.25,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 4416.25,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO9812022834923",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2010-11-13"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Dag Andreassen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12033327209",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -267697.0250336891
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.65 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO3012033327209",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2017-10-17"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12007797450",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 748.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 52.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO2812007797450",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2003-01-25"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12060201724",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 3315.5,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1639.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO3712060201724",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2001-04-11"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12028861815",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 2231.3,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1515.8000000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO2612028861815",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2003-04-20"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12034084044",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 18340.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 419.5,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO3712034084044",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2000-07-26"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12089904525",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -1781969.8687542235
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO6212089904525",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "2004-02-21"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12066105777",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 1980.3000000000002,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1448.3000000000002,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.1 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO1612066105777",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1980-02-22"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12077891957",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 13114.0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 1309.0,
+        "creditInterestPreviousYear": 0
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 0.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO1312077891957",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1983-02-25"
+  },
+  {
+    "accountUserRoles": [
+      { "roleOwnerName": "Camilla Andresen", "roleType": "OWNER" }
+    ],
+    "accountCurrency": "NOK",
+    "accountNumber": "12057881984",
+    "accumulators": [
+      {
+        "debitInterestPreviousYear": 0,
+        "feesThisYear": 0.0,
+        "debitInterestThisYear": 0,
+        "creditInterestPreviousYear": -3249360.1801774255
+      }
+    ],
+    "depositInterestRates": [{ "depositThreshold": 0, "depositRate": 2.5 }],
+    "interestCalculationMethod": "BALANCE",
+    "lastTransactionDate": "2018-6-12",
+    "iban": "NO0812057881984",
+    "overdraftInterestRate": 0,
+    "bic": "DNBANOKKXXX",
+    "openingDate": "1984-12-27"
+  }
+]
