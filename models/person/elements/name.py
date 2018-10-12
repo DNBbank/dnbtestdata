@@ -17,9 +17,9 @@ class _NorwegianName:
 
     @classmethod
     def generate_random_first_name(cls, gender):
-        if gender.MALE:
+        if gender == gender.MALE:
             return cls.fake.first_name_male()
-        elif gender.FEMALE:
+        elif gender == gender.FEMALE:
             return cls.fake.first_name_female()
         else:
             raise Exception()
