@@ -137,21 +137,16 @@ def create_payments(account):
     # only generating for current accounts
     if account['productName'] in ['BRUKSKONTO','BRUKSKONTO TILLEGG','STUDENT BRUKSKONTO']:
         no_of_due_payments = np.random.randint(1,7) # must generate
-        # print("No of due payments",no_of_due_payments)
         no_of_reserved_transactions = np.random.randint(1,3) # must generate
-        # print("No of reserved",no_of_reserved_transactions)
         account_number = account['accountNumber']
         account_owner_ssn = account['accountOwnerPublicId']
         # generating with some transactions each day
         for day in range(1, 30):
             trans_count = np.random.randint(0,2)
-            # print("No of transac",trans_count)
-
             resv_trans_count = 0
             no_of_transactions = 0
 
             while resv_trans_count < no_of_reserved_transactions:
-                # random_number = random.randint(0,5)
                 transaction_id   =  str(np.random.randint(100000, 9999999))
                 transaction_date =  get_date('previous', day)
                 payment_type = get_payment_type()
@@ -159,7 +154,6 @@ def create_payments(account):
                 external_reference = np.random.randint(100000, 9999999)
                 description = get_transaction_description(payment_type, transaction_date)
 
-                # if resv_trans_count < no_of_reserved_transactions and random_number<3:
                 value_date = get_date('valuedate', day)
                 reserved_transaction = {
                         'ssn':              account_owner_ssn, # Only used for grouping
@@ -178,31 +172,10 @@ def create_payments(account):
                             'textCode':'0023'
                         }
                 }
-                # reserved_transactions.append(reserved_transaction)
                 resv_trans_count += 1
-                # else:
-                #     booked_transaction = {
-                #         'transactionId':    transaction_id,
-                #         'accountNumber':    account_number,
-                #         'bookingDate':      transaction_date,
-                #         'transactionDate':  transaction_date,
-                #          'description':     description,
-                #          'valueDate':       transaction_date,
-                #          'amount':          amount,
-                #          'externalReference':   external_reference,
-                #          'textlines':{
-                #             'Item':     payment_type
-                #          },
-                #          'details':{
-                #             'textCode': '0023'
-                #          }
-                #     }
-                #     booked_transactions.append(booked_transaction)
-                #     no_of_transactions += 1
-
+            
         # Generating Booked Payments (transactions) for a checking account (BRUKSKONTO)
         booked_transaction = CheckingAccount(account_number, account_owner_ssn).transactions
-        # booked_transactions.extend(booked_transaction)
        
          # Generating due payments
         count = 0
@@ -227,13 +200,15 @@ def create_payments(account):
             }
             count += 1
     return [booked_transaction, due_payment, reserved_transaction]
-    # Due Payments
-    #print(json.dumps(due_payments, indent=2, ensure_ascii=False))
+
 def save_payments_to_json(payments):
-    #Saves the list of payments
+
+    #Saves the list of payments into json files
+
     due_payments = list()
     booked_transactions = list()
     reserved_transactions = list()
+
     for payment in payments:
         if all(transaction is not None for transaction in payment):
             booked = payment[0]
@@ -243,34 +218,37 @@ def save_payments_to_json(payments):
             reserved = payment[2]
             reserved_transactions.append(reserved)
 
+        # Due Payments
     with codecs.open(filename_payments, 'w', encoding='utf-8') as outfile:
         json.dump(due_payments, outfile, ensure_ascii=False)
 
         # Booked trasactions
-        #print(json.dumps(booked_transactions, indent=2, ensure_ascii=False))
     with codecs.open(filename_booked_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(booked_transactions, outfile, ensure_ascii=False)
 
         # Reserved trasactions
-        #print(json.dumps(reserved_transactions, indent=2, ensure_ascii=False))
     with codecs.open(filename_reserved_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(reserved_transactions, outfile, ensure_ascii=False)
 
 
-#Handle CLI arguments
+# Handle CLI arguments
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('accounts',
-        help='A json file containing accounts to generate account details for. This file is typically output by the create_accounts.py script', default='generated-accounts-07-10-2018.json',type=str)
+        help='A json file containing accounts to generate account details for. This file is typically output by the create_accounts.py script',type=str)
 parser.add_argument('-p','--processes', help="Number of processes to use for payment generation", default=4, type=int)
 args = parser.parse_args()
 
-# Business time
+# Load account data
 data = json.load(open(args.accounts))
 start = time.time()
+
+# Create pool of threads and map them to elements in the account data.
 threadPool = mp.Pool(args.processes)
 payments = threadPool.map(create_payments, data)
 threadPool.close()
 threadPool.join()
+
+# Save the returned payments
 save_payments_to_json(payments)
 stop = time.time()
 print("Done!")
