@@ -155,6 +155,20 @@ def get_transaction_description(payment_category, transaction_date):
     return description
 
 
+def sample(length, lowerLimit, upperLimit):
+
+    # Sampling without replacement method
+
+    arr = []
+    randPool = {}
+    for _ in range(length):
+        randInt = np.random.randint(lowerLimit, upperLimit)
+        x = randPool.get(randInt, randInt)
+        randPool[randInt] = randPool.get(lowerLimit, lowerLimit)
+        lowerLimit += 1
+        arr.append(x)
+    return arr
+    
 class CheckingAccount:
     def __init__(self,accountNumber, accountOwnerSsn):
         self.accountNumber = accountNumber
@@ -274,17 +288,17 @@ class CheckingAccount:
 
         SynthData['description'] = SynthData.apply(lambda row: get_transaction_description(row['Category'],row['Date']), axis=1) # FIXME: this line crashes when running many times
 
-        # Print number of trx and total sum on account
-        #print(SynthData.groupby(['AccountID'])['Amount'].agg(['count', 'sum']))
-
         # Reformat date column
         SynthData['Date'] = pd.to_datetime(SynthData['Date'], dayfirst=True, format='%Y-%m-%d')
         SynthData = SynthData.sort_values(by=['Date'])
-
+        
         # Generate random trx ID
-        TRX_ID = np.random.choice(np.arange(1000000, 9999999), len(SynthData.index), replace=False)
+        upperLimit=9999999
+        lowerLimit=1000000
+        TRX_ID = sample(len(SynthData.index),lowerLimit, upperLimit)
         TRX_ID = np.sort(TRX_ID)
         SynthData['transactionId'] = TRX_ID
+        assert len(TRX_ID)==len(set(TRX_ID)), "Collision in transaction IDs"
 
         # Sort by accountId and date
         SynthData = SynthData.sort_values(by=['AccountID', 'Date'])
@@ -309,6 +323,4 @@ class CheckingAccount:
         # Return
         return json.loads(SynthData.to_json(orient='records',date_format='iso', force_ascii=False).replace('T00:00:00.000Z',''))
 
-# acc = CheckingAccount(1000)
-# import pprint
-# pprint.pprint(acc.transactions)
+
