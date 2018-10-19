@@ -87,4 +87,5 @@ parser.add_argument('accounts',
                          'This file is typically output by the create_accounts.py script')
 args = parser.parse_args()
 
-create_account_detail_and_account_balance_files(json.load(open(args.accounts)))
+with open(args.accounts, encoding='utf-8') as fh:
+    create_account_detail_and_account_balance_files(json.load(fh))
