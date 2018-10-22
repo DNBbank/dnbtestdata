@@ -22,8 +22,7 @@ import operator
 import json
 import random
 from faker import Faker
-from datetime import date, timedelta, datetime
-import pandas as pd
+from datetime import date, timedelta
 import numpy as np
 from models.transaction.checking_account import CheckingAccount
 
@@ -135,6 +134,7 @@ def create_payments(account):
     reserved_transaction = None 
     # generating for all the different accounts
     # only generating for current accounts
+
     if account['productName'] in ['BRUKSKONTO','BRUKSKONTO TILLEGG','STUDENT BRUKSKONTO']:
         no_of_due_payments = np.random.randint(1,7) # must generate
         no_of_reserved_transactions = np.random.randint(1,3) # must generate
@@ -173,10 +173,10 @@ def create_payments(account):
                         }
                 }
                 resv_trans_count += 1
-            
+
         # Generating Booked Payments (transactions) for a checking account (BRUKSKONTO)
         booked_transaction = CheckingAccount(account_number, account_owner_ssn).transactions
-       
+
          # Generating due payments
         count = 0
         while count < no_of_due_payments:
@@ -199,6 +199,7 @@ def create_payments(account):
                     'immediatePayment':    'false'
             }
             count += 1
+
     return [booked_transaction, due_payment, reserved_transaction]
 
 def save_payments_to_json(payments):
@@ -230,26 +231,27 @@ def save_payments_to_json(payments):
     with codecs.open(filename_reserved_transactions, 'w', encoding='utf-8') as outfile:
         json.dump(reserved_transactions, outfile, ensure_ascii=False)
 
+if __name__ == "__main__":
+    # Handle CLI arguments
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('accounts',
+            help='A json file containing accounts to generate account details for. This file is typically output by the create_accounts.py script',type=str)
+    parser.add_argument('-p','--processes', help="Number of processes to use for payment generation", default=4, type=int)
+    args = parser.parse_args()
 
-# Handle CLI arguments
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('accounts',
-        help='A json file containing accounts to generate account details for. This file is typically output by the create_accounts.py script',type=str)
-parser.add_argument('-p','--processes', help="Number of processes to use for payment generation", default=4, type=int)
-args = parser.parse_args()
+    # Load account data
+    with open(args.accounts, encoding='utf-8') as fh:
+        data = json.load(fh)
+        start = time.time()
 
-# Load account data
-data = json.load(open(args.accounts))
-start = time.time()
+        # Create pool of threads and map them to elements in the account data.
+        threadPool = mp.Pool(args.processes)
+        payments = threadPool.map(create_payments, data)
+        threadPool.close()
+        threadPool.join()
 
-# Create pool of threads and map them to elements in the account data.
-threadPool = mp.Pool(args.processes)
-payments = threadPool.map(create_payments, data)
-threadPool.close()
-threadPool.join()
-
-# Save the returned payments
-save_payments_to_json(payments)
-stop = time.time()
-print("Done!")
-print("Time:",stop-start)
+        # Save the returned payments
+        save_payments_to_json(payments)
+        stop = time.time()
+        print("Done!")
+        print("Time:",stop-start)
