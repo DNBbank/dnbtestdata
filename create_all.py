@@ -47,11 +47,13 @@ if __name__ == "__main__":
     # Create cards for each of the accounts
     # 'generated-cards' json file created
     cards = create_cards(accounts)
-    print('\nCreated cards\n')
     cards_json = list(map(lambda c: c.to_json(), cards))
     FileUtil.json_to_json_file(cards_json, 'generated-cards')
+    print('\nCreated cards\n')
 
     # Create balances for each of the cards
     # 'generated-card-balances' json file created
-    card_balances = create_card_balances(accounts)
+    balances = create_card_balances(cards)
+    balances_json = list(map(lambda s: s.to_json(), balances))
+    FileUtil.json_to_json_file(balances_json, 'generated-card-balances')
     print('\nCreated balances\n')

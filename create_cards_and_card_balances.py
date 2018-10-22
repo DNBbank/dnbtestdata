@@ -30,10 +30,8 @@ def create_card_balances(cards):
     balances = list()
     for card in cards:
         #Only generate balance for credit cards
-        if 'card_type' == CardType.CREDIT in card:
+        if card.card_type == CardType.CREDIT:
             balances.append(CardBalance.generate_random(card))
-        else:
-            return balances
     return balances
 
 if __name__ == "__main__":
