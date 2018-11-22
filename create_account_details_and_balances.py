@@ -80,6 +80,7 @@ def create_account_detail_and_account_balance_files(accounts):
     FileUtil.json_to_json_file(account_details, 'generated-account-details')
     FileUtil.json_to_json_file(account_balances, 'generated-account-balances')
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('accounts',
