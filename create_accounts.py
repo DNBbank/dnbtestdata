@@ -39,11 +39,12 @@ def create_list_of_account_json(persons):
                     account_count += 1
     return accounts
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('people',
+                        help='A json file containing people to generate accounts for. '
+                             'This file is typically output by the create_people.py script')
+    args = parser.parse_args()
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('people',
-                    help='A json file containing people to generate accounts for. '
-                         'This file is typically output by the create_people.py script')
-args = parser.parse_args()
-
-FileUtil.json_to_json_file(create_list_of_account_json(json.load(open(args.people))), 'generated-accounts')
+    with open(args.people, encoding='utf-8') as fh:
+        FileUtil.json_to_json_file(create_list_of_account_json(json.load(fh)), 'generated-accounts')

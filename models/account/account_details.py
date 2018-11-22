@@ -45,7 +45,17 @@ class AccountDetails:
             'iban':                        iban,
             'overdraftInterestRate':       0,
             'bic':                         'DNBANOKKXXX',
-            'openingDate':                 opening_date
+            'openingDate':                 opening_date,
+            'salesProductId':              '104466',
+            'salesProductName':            'AKSJESPAREKONTO OVER INTERNETT',
+            'transactionRestrictions': [
+                {
+                    'blockingRestriction':          '',
+                    'restrictedWithdrawalAmount':   0,
+                    'freeWithdrawals':              0,
+                    'remainingFreeWithdrawals':     0
+                },
+            ],
         }
 
         return account_details

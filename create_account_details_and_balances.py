@@ -81,11 +81,12 @@ def create_account_detail_and_account_balance_files(accounts):
     FileUtil.json_to_json_file(account_balances, 'generated-account-balances')
 
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('accounts',
-                    help='A json file containing accounts to generate account details for. '
-                         'This file is typically output by the create_accounts.py script')
-args = parser.parse_args()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('accounts',
+                        help='A json file containing accounts to generate account details for. '
+                             'This file is typically output by the create_accounts.py script')
+    args = parser.parse_args()
 
-with open(args.accounts, encoding='utf-8') as fh:
-    create_account_detail_and_account_balance_files(json.load(fh))
+    with open(args.accounts, encoding='utf-8') as fh:
+        create_account_detail_and_account_balance_files(json.load(fh))
