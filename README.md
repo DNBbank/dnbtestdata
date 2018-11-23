@@ -1,6 +1,6 @@
 # 🥁 Please note 🥁
 
-**IMPORTANT:** This is a work in progress, and all information may change at any time. Please contact developer@dnb.no if you have questions or comments. 
+**IMPORTANT:** This is a work in progress, and all information may change at any time. Please contact developer@dnb.no if you have questions or comments.
 
 # Test data for DNB
 
@@ -18,7 +18,8 @@ Branches, ATMs, etc are avilable in the "csv" directory, and in the links below.
 # People
 
 - Fake people with valid SSNs and realistic-ish data
-- Real companies (from brreg.no)
+- Names are from [SSB](https://ssb.no)
+- Real companies [brreg](https://brreg.no)
 - Bank accounts
     - One or more per person: https://github.com/joke2k/faker/pull/726
 - Debit cards
@@ -32,7 +33,7 @@ The following are must-have patterns. Some are broad in terms of the data range,
 
 As I said yesterday I recommend patterns in terms of bigger categories, and not MCCs or similar. I also highly recommend drawing amounts from normal distributions given a good guess on mean, and day of month of recurrent payments etc. from random distributions. When it comes to frequencies, monthly frequency is most represented, but you could throw in some quarterly or yearly frequencies as well. The next installment of a recurrent payment must respect the frequency, so I suggest fixing the day of month from one installment to the next, taking special care of the last day of the month (28 for February).
 
- 
+
 1. The average net salary in Norway is 30.000 NOK/month. Basically the entire population has an “Income”-post (salary, student loan, pension). The distribution has a large variance, but is of course bounded below at 0. The most represented frequency is monthly, and I think it would be wise to simplify so all income is monthly.
 1. Almost everyone rents or has a mortgage. I would guess an average of 10.000 NOK/month on “Loans & Rent” with a large variance bounded below at 0. Monthly frequency.
 1. Let’s say that 50% has recurrent “Transport” expenses, in the range 500-1000 NOK fixed each month. Another 30% has variable transport expenses (fuel, car maintenance, various irregular public transport).
@@ -67,8 +68,8 @@ As I said yesterday I recommend patterns in terms of bigger categories, and not 
 Categories 1,2,4,5,8,9,11,12,13,14 and 16 should have been mentioned above. The rest can have various amount of instances per account, with highly variable amounts. If it is possible in the seeding process I also recommend implementing some limits to the overall surplus or deficit on an account, for realism. If it is possible, the likelihood of the categories being represented on a current account is also variable, i.e. 1,2,5 and 12 are highly likely (sort of must-haves), while the rest are less likely. “
 
 # How to run it?
-1. To generate 10 people run `python create_people.py -n 10`, this will create a JSON-file with people `generated-people-{date}.json`. 
+1. To generate 10 people run `python create_people.py -n 10`, this will create a JSON-file with people `generated-people-{date}.json`.
 2. `python create_accounts.py generated-people-{date}.json`, this will create a JSON-file with accounts `generated-accounts{date}.json`
 3. `python create_payments.py generated-accounts{date}.json`, this will create three JSON-files with booked, reserved and due transactions
 4. `python create_account_details_and_balances.py generated-accounts{date}.json`, this will create a JSON-file with balance and details for the accounts `generated-account-balances{date}.json`, `generated-account-details13-06-2018.json`
- 
+
